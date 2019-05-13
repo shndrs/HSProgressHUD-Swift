@@ -12,6 +12,7 @@ final class ViewController: UIViewController {
 
     let shapeLayer = CAShapeLayer()
     let trackShapeLayer = CAShapeLayer()
+    var pulsatingLayer: CAShapeLayer!
     
     let label: UILabel = {
         let lbl = UILabel()
@@ -29,7 +30,6 @@ final class ViewController: UIViewController {
         label.center = view.center
         view.addSubview(label)
         setUI()
-        
     }
     
     private func setUI() {
@@ -39,6 +39,20 @@ final class ViewController: UIViewController {
                                              startAngle: -(.pi) / 2,
                                              endAngle:2 * .pi,
                                              clockwise: true)
+        
+        
+        
+        pulsatingLayer = CAShapeLayer()
+        pulsatingLayer.position = view.center
+        pulsatingLayer.path = circularTrackPath.cgPath
+        pulsatingLayer.lineCap = CAShapeLayerLineCap.round
+        pulsatingLayer.lineWidth = 10
+        pulsatingLayer.fillColor = UIColor.purple.withAlphaComponent(0.3).cgColor
+        view.layer.addSublayer(pulsatingLayer)
+        
+        
+        
+        
         trackShapeLayer.position = view.center
         trackShapeLayer.path = circularTrackPath.cgPath
         trackShapeLayer.lineCap = CAShapeLayerLineCap.round
@@ -46,6 +60,12 @@ final class ViewController: UIViewController {
         trackShapeLayer.lineWidth = 10
         trackShapeLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackShapeLayer)
+        
+        
+        animatePulsatingLayer()
+        
+        
+        
         
         let circularPath = UIBezierPath(arcCenter: .zero,
                                         radius: 100,
@@ -59,7 +79,7 @@ final class ViewController: UIViewController {
         shapeLayer.path = circularPath.cgPath
         shapeLayer.lineCap = CAShapeLayerLineCap.round
         shapeLayer.strokeColor = UIColor.purple.cgColor
-        shapeLayer.lineWidth = 10
+        shapeLayer.lineWidth = 20
         
         view.layer.addSublayer(shapeLayer)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
@@ -67,6 +87,17 @@ final class ViewController: UIViewController {
     
     private func beginDownloadingFile() {
         print("download file")
+    }
+    
+    private func animatePulsatingLayer() {
+        
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        animation.toValue = 1.13
+        animation.duration = 0.8
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
+        pulsatingLayer.add(animation, forKey: "shndrsTransform")
         
     }
     
