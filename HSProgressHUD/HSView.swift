@@ -21,23 +21,21 @@ public class HSView: UIView {
     
     public static let `default` = HSView()
     
+    private let pleaseWait = "Please Wait..."
+    private let fontName = "AvenirNext-Heavy"
     private var trackLayerColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     private var pulsateLayerColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     private lazy var trackShapeLayer = CAShapeLayer()
     private lazy var pulsateShapeLayer = CAShapeLayer()
-    private lazy var circularTrackPath = UIBezierPath(arcCenter: .zero,
-                                                      radius: 100,
-                                                      startAngle: -(.pi) / 2,
-                                                      endAngle:2 * .pi,
-                                                      clockwise: true)
+    private lazy var circularTrackPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: -(.pi) / 2, endAngle:2 * .pi, clockwise: true)
     
     lazy var titleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.text = "Please Wait..."
+        lbl.text = pleaseWait
         lbl.textAlignment = .center
         lbl.textColor = .white
         lbl.numberOfLines = 3
-        lbl.font = UIFont(name: "AvenirNext-Heavy", size: 19)
+        lbl.font = UIFont(name: fontName, size: 19)
         return lbl
     }()
     
@@ -47,7 +45,6 @@ public class HSView: UIView {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.65)
         return view
     }()
-    
     
     private convenience init() {
         self.init()
@@ -167,6 +164,13 @@ public extension HSView {
                                          startAngle: -(.pi) / 2,
                                          endAngle:2 * .pi,
                                          clockwise: true)
+    }
+    
+    /// The Color of our Layers
+    
+    public func set(trackColor:UIColor, pulsateColor:UIColor) {
+        trackLayerColor = trackColor
+        pulsateLayerColor = pulsateColor
     }
 }
 
