@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wfkenpsg24e3" translatesAutoresizingMaskIntoConstraints="NO" id="rl1-Tb-CO5">
-                                <rect key="frame" x="0.0" y="80" width="375" height="697"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg5" translatesAutoresizingMaskIntoConstraints="NO" id="rl1-Tb-CO5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uX-6x-UD4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -32,8 +32,8 @@
                             <constraint firstItem="6uX-6x-UD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BPk-kl-Mpr"/>
                             <constraint firstItem="6uX-6x-UD4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IgH-iU-adb"/>
                             <constraint firstAttribute="bottom" secondItem="6uX-6x-UD4" secondAttribute="bottom" id="KlV-74-sxP"/>
-                            <constraint firstAttribute="bottom" secondItem="rl1-Tb-CO5" secondAttribute="bottom" constant="35" id="UmR-2c-y6U"/>
-                            <constraint firstItem="rl1-Tb-CO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="VYS-71-E4g"/>
+                            <constraint firstAttribute="bottom" secondItem="rl1-Tb-CO5" secondAttribute="bottom" id="UmR-2c-y6U"/>
+                            <constraint firstItem="rl1-Tb-CO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VYS-71-E4g"/>
                             <constraint firstItem="rl1-Tb-CO5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p0s-bV-BKN"/>
                             <constraint firstItem="6uX-6x-UD4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y3i-NW-bFI"/>
                         </constraints>
@@ -46,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wfkenpsg24e3" width="750" height="1334"/>
+        <image name="bg5" width="1533" height="2300"/>
     </resources>
 </document>

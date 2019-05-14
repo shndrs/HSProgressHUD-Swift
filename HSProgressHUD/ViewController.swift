@@ -14,12 +14,15 @@ final class ViewController: UIViewController {
     let trackShapeLayer = CAShapeLayer()
     var pulsatingLayer: CAShapeLayer!
     
+    let color = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    let color2 = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+    
     let label: UILabel = {
         let lbl = UILabel()
         lbl.text = "Please Wait..."
         lbl.textAlignment = .center
         lbl.textColor = .white
-        lbl.numberOfLines = 2
+        lbl.numberOfLines = 3
         lbl.font = UIFont(name: "AvenirNext-Heavy", size: 19)
         return lbl
     }()
@@ -34,8 +37,8 @@ final class ViewController: UIViewController {
     }
     
     private func setUI() {
-//        (220,20,60)
-        let color = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1).cgColor
+        
+        
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
                                              radius: 100,
@@ -43,26 +46,24 @@ final class ViewController: UIViewController {
                                              endAngle:2 * .pi,
                                              clockwise: true)
         
-        
-        
         pulsatingLayer = CAShapeLayer()
         pulsatingLayer.position = view.center
         pulsatingLayer.path = circularTrackPath.cgPath
         pulsatingLayer.lineCap = CAShapeLayerLineCap.round
         pulsatingLayer.lineWidth = 20
         pulsatingLayer.fillColor = UIColor.clear.cgColor
-        pulsatingLayer.strokeColor = UIColor.purple.withAlphaComponent(0.4).cgColor
+        pulsatingLayer.strokeColor = color.withAlphaComponent(0.6).cgColor
         view.layer.addSublayer(pulsatingLayer)
+        
+        animatePulsatingLayer()
         
         trackShapeLayer.position = view.center
         trackShapeLayer.path = circularTrackPath.cgPath
         trackShapeLayer.lineCap = CAShapeLayerLineCap.round
-        trackShapeLayer.strokeColor = UIColor.purple.cgColor
+        trackShapeLayer.strokeColor = color.cgColor
         trackShapeLayer.lineWidth = 20
         trackShapeLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackShapeLayer)
-        
-        animatePulsatingLayer()
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
@@ -70,12 +71,33 @@ final class ViewController: UIViewController {
     private func animatePulsatingLayer() {
         
         let animation = CABasicAnimation(keyPath: "transform.scale")
+        let animation2 = CABasicAnimation(keyPath: "opacity")
+        let animation3 = CABasicAnimation(keyPath: "transform.scale.x")
+        
+        animation3.fromValue = 1
+        animation3.toValue = 1.04
+        animation3.duration = 1.0
+        animation3.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation3.autoreverses = true
+        animation3.repeatCount = .infinity
+        
+        animation2.fromValue = 0.6
+        animation2.toValue = 0.3
+        
+        animation2.duration = 0.4
+        animation2.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animation2.autoreverses = true
+        animation2.repeatCount = .infinity
+        
+        
         animation.toValue = 1.13
         animation.duration = 0.8
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
         animation.autoreverses = true
         animation.repeatCount = .infinity
         pulsatingLayer.add(animation, forKey: "shndrsTransform")
+        pulsatingLayer.add(animation2, forKey: "shndrsOpacity")
+        label.layer.add(animation3, forKey: "shndrsOpacity")
     }
     
     fileprivate func circleAnimation() {
@@ -88,8 +110,6 @@ final class ViewController: UIViewController {
     }
     
     @objc private func handleTap() {
-        print("SHNDRS")
-        
         circleAnimation()
     }
 }
