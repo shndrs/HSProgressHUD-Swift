@@ -18,7 +18,8 @@ final class ViewController: UIViewController {
         let lbl = UILabel()
         lbl.text = "Please Wait..."
         lbl.textAlignment = .center
-        lbl.textColor = .black
+        lbl.textColor = .white
+        lbl.numberOfLines = 2
         lbl.font = UIFont(name: "AvenirNext-Heavy", size: 19)
         return lbl
     }()
@@ -26,13 +27,15 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.frame = CGRect(x: 0, y: 0, width: 140, height: 40)
+        label.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         label.center = view.center
         view.addSubview(label)
         setUI()
     }
     
     private func setUI() {
+//        (220,20,60)
+        let color = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1).cgColor
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
                                              radius: 100,
@@ -46,47 +49,22 @@ final class ViewController: UIViewController {
         pulsatingLayer.position = view.center
         pulsatingLayer.path = circularTrackPath.cgPath
         pulsatingLayer.lineCap = CAShapeLayerLineCap.round
-        pulsatingLayer.lineWidth = 10
-        pulsatingLayer.fillColor = UIColor.purple.withAlphaComponent(0.3).cgColor
+        pulsatingLayer.lineWidth = 20
+        pulsatingLayer.fillColor = UIColor.clear.cgColor
+        pulsatingLayer.strokeColor = UIColor.purple.withAlphaComponent(0.4).cgColor
         view.layer.addSublayer(pulsatingLayer)
-        
-        
-        
         
         trackShapeLayer.position = view.center
         trackShapeLayer.path = circularTrackPath.cgPath
         trackShapeLayer.lineCap = CAShapeLayerLineCap.round
-        trackShapeLayer.strokeColor = UIColor.purple.withAlphaComponent(0.3).cgColor
-        trackShapeLayer.lineWidth = 10
+        trackShapeLayer.strokeColor = UIColor.purple.cgColor
+        trackShapeLayer.lineWidth = 20
         trackShapeLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackShapeLayer)
         
-        
         animatePulsatingLayer()
         
-        
-        
-        
-        let circularPath = UIBezierPath(arcCenter: .zero,
-                                        radius: 100,
-                                        startAngle: -(.pi) / 2,
-                                        endAngle:2 * .pi,
-                                        clockwise: true)
-        
-        shapeLayer.position = view.center
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeEnd = 0
-        shapeLayer.path = circularPath.cgPath
-        shapeLayer.lineCap = CAShapeLayerLineCap.round
-        shapeLayer.strokeColor = UIColor.purple.cgColor
-        shapeLayer.lineWidth = 20
-        
-        view.layer.addSublayer(shapeLayer)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-    }
-    
-    private func beginDownloadingFile() {
-        print("download file")
     }
     
     private func animatePulsatingLayer() {
@@ -98,7 +76,6 @@ final class ViewController: UIViewController {
         animation.autoreverses = true
         animation.repeatCount = .infinity
         pulsatingLayer.add(animation, forKey: "shndrsTransform")
-        
     }
     
     fileprivate func circleAnimation() {
@@ -113,7 +90,6 @@ final class ViewController: UIViewController {
     @objc private func handleTap() {
         print("SHNDRS")
         
-        beginDownloadingFile()
         circleAnimation()
     }
 }
