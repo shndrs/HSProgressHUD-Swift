@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
     let color = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     let color2 = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
     
-    let label: UILabel = {
+    lazy var label: UILabel = {
         let lbl = UILabel()
         lbl.text = "Please Wait..."
         lbl.textAlignment = .center
@@ -38,8 +38,6 @@ final class ViewController: UIViewController {
     
     private func setUI() {
         
-        
-        
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
                                              radius: 100,
                                              startAngle: -(.pi) / 2,
@@ -52,7 +50,7 @@ final class ViewController: UIViewController {
         pulsatingLayer.lineCap = CAShapeLayerLineCap.round
         pulsatingLayer.lineWidth = 20
         pulsatingLayer.fillColor = UIColor.clear.cgColor
-        pulsatingLayer.strokeColor = color.withAlphaComponent(0.6).cgColor
+        pulsatingLayer.strokeColor = color.withAlphaComponent(0.32).cgColor
         view.layer.addSublayer(pulsatingLayer)
         
         animatePulsatingLayer()
@@ -66,6 +64,10 @@ final class ViewController: UIViewController {
         view.layer.addSublayer(trackShapeLayer)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        
+        
+        
     }
     
     private func animatePulsatingLayer() {
@@ -75,20 +77,18 @@ final class ViewController: UIViewController {
         let animation3 = CABasicAnimation(keyPath: "transform.scale.x")
         
         animation3.fromValue = 1
-        animation3.toValue = 1.04
+        animation3.toValue = 1.02
         animation3.duration = 1.0
         animation3.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         animation3.autoreverses = true
         animation3.repeatCount = .infinity
         
-        animation2.fromValue = 0.6
-        animation2.toValue = 0.3
-        
+        animation2.fromValue = 1
+        animation2.toValue = 0.5
         animation2.duration = 0.4
         animation2.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation2.autoreverses = true
         animation2.repeatCount = .infinity
-        
         
         animation.toValue = 1.13
         animation.duration = 0.8
@@ -96,8 +96,8 @@ final class ViewController: UIViewController {
         animation.autoreverses = true
         animation.repeatCount = .infinity
         pulsatingLayer.add(animation, forKey: "shndrsTransform")
-        pulsatingLayer.add(animation2, forKey: "shndrsOpacity")
-        label.layer.add(animation3, forKey: "shndrsOpacity")
+        label.layer.add(animation2, forKey: "shndrsOpacity")
+        label.layer.add(animation3, forKey: "shndrsXTrans")
     }
     
     fileprivate func circleAnimation() {
@@ -111,6 +111,7 @@ final class ViewController: UIViewController {
     
     @objc private func handleTap() {
         circleAnimation()
+        
     }
 }
 
