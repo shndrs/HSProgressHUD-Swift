@@ -13,9 +13,6 @@ fileprivate protocol HSViewHUD {
     func dismiss(completion: @escaping ()->Void) -> Void
 }
 
-fileprivate enum ShapeLayerType {
-    case track, pulsate, innerPulsate
-}
 
 public class HSView: UIView {
     

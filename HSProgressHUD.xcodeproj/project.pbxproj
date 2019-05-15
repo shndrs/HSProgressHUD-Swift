@@ -13,6 +13,12 @@
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
 		F433BD332289766300281381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD312289766300281381 /* LaunchScreen.storyboard */; };
 		F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
+		F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA8B228BF9990055B590 /* HSProgress Model.swift */; };
+		F43DEA92228C07AD0055B590 /* TypeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA91228C07AD0055B590 /* TypeOne.swift */; };
+		F43DEA94228C07B90055B590 /* TypeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA93228C07B90055B590 /* TypeTwo.swift */; };
+		F43DEA96228C07C40055B590 /* TypeThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA95228C07C40055B590 /* TypeThree.swift */; };
+		F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA98228C08340055B590 /* HSBaseView.swift */; };
+		F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9B228C08950055B590 /* HSFactory.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +32,12 @@
 		F433BD322289766300281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F433BD342289766300281381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43DEA88228BD34B0055B590 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F43DEA8B228BF9990055B590 /* HSProgress Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HSProgress Model.swift"; sourceTree = "<group>"; };
+		F43DEA91228C07AD0055B590 /* TypeOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOne.swift; sourceTree = "<group>"; };
+		F43DEA93228C07B90055B590 /* TypeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTwo.swift; sourceTree = "<group>"; };
+		F43DEA95228C07C40055B590 /* TypeThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeThree.swift; sourceTree = "<group>"; };
+		F43DEA98228C08340055B590 /* HSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBaseView.swift; sourceTree = "<group>"; };
+		F43DEA9B228C08950055B590 /* HSFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSFactory.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +72,10 @@
 		F433BD272289766200281381 /* HSProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				F43DEA9A228C086A0055B590 /* Factory */,
+				F43DEA97228C08160055B590 /* HSBaseView */,
+				F43DEA8D228C07430055B590 /* Pregresses Type */,
+				F43DEA8A228BF97E0055B590 /* HSProgress Model */,
 				F433BD282289766200281381 /* AppDelegate.swift */,
 				F433BD2A2289766200281381 /* ViewController.swift */,
 				F433BD2C2289766200281381 /* Main.storyboard */,
@@ -71,6 +87,64 @@
 				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
 			);
 			path = HSProgressHUD;
+			sourceTree = "<group>";
+		};
+		F43DEA8A228BF97E0055B590 /* HSProgress Model */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA8B228BF9990055B590 /* HSProgress Model.swift */,
+			);
+			path = "HSProgress Model";
+			sourceTree = "<group>";
+		};
+		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA90228C07600055B590 /* TypeThree */,
+				F43DEA8F228C07570055B590 /* TypeTwo */,
+				F43DEA8E228C074E0055B590 /* TypeOne */,
+			);
+			path = "Pregresses Type";
+			sourceTree = "<group>";
+		};
+		F43DEA8E228C074E0055B590 /* TypeOne */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA91228C07AD0055B590 /* TypeOne.swift */,
+			);
+			path = TypeOne;
+			sourceTree = "<group>";
+		};
+		F43DEA8F228C07570055B590 /* TypeTwo */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA93228C07B90055B590 /* TypeTwo.swift */,
+			);
+			path = TypeTwo;
+			sourceTree = "<group>";
+		};
+		F43DEA90228C07600055B590 /* TypeThree */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA95228C07C40055B590 /* TypeThree.swift */,
+			);
+			path = TypeThree;
+			sourceTree = "<group>";
+		};
+		F43DEA97228C08160055B590 /* HSBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA98228C08340055B590 /* HSBaseView.swift */,
+			);
+			path = HSBaseView;
+			sourceTree = "<group>";
+		};
+		F43DEA9A228C086A0055B590 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA9B228C08950055B590 /* HSFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +220,12 @@
 			files = (
 				F433BD2B2289766200281381 /* ViewController.swift in Sources */,
 				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
+				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
+				F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */,
+				F43DEA96228C07C40055B590 /* TypeThree.swift in Sources */,
+				F43DEA92228C07AD0055B590 /* TypeOne.swift in Sources */,
+				F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */,
+				F43DEA94228C07B90055B590 /* TypeTwo.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
 				F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */,
 				F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */,
