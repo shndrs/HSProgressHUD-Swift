@@ -16,13 +16,9 @@ final class SecondViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let a = HSProgress(animationOption: .type2)
-        
+        let a = HSProgress(animationOption: .lineLayer)
         let show = HSProgressFactory.set(progress: a)
         show.show()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            show.dismiss(completion: nil)
-        }
     }
 }
 

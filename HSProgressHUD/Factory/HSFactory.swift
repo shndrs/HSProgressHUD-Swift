@@ -14,13 +14,13 @@ public struct HSProgressFactory {
         
         switch progress.animationOption! {
             
-        case .type1:
+        case .heartBeat:
             
             return TypeOne(progress: progress)
-        case .type2:
+        case .xRotation:
             
             return TypeTwo(progress: progress)
-        case .type3:
+        case .lineLayer:
             
             return TypeThree(progress: progress)
         case .type4:

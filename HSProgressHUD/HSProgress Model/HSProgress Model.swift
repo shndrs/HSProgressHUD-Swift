@@ -22,7 +22,7 @@ public struct HSProgress {
     public var animationOption: HSAnimationOptions!
     
     public enum HSAnimationOptions {
-        case type1, type2, type3, type4
+        case heartBeat, xRotation, lineLayer, type4
     }
     
     init(strokeColor:UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1),
@@ -34,7 +34,7 @@ public struct HSProgress {
          titleTextColor:UIColor = .white,
          transViewBackgroundColor:UIColor = UIColor.black,
          radius:CGFloat = 105.0,
-         animationOption:HSAnimationOptions = .type1) {
+         animationOption:HSAnimationOptions = .heartBeat) {
         
         self.strokeColor = strokeColor
         self.strokeWidth = strokeWidth

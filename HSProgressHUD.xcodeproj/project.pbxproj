@@ -74,13 +74,13 @@
 		F433BD272289766200281381 /* HSProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				F4BE6A5F228C2DA40044F3A2 /* VC */,
 				F43DEA9D228C0C3D0055B590 /* Interfaces */,
 				F43DEA9A228C086A0055B590 /* Factory */,
 				F43DEA97228C08160055B590 /* HSBaseView */,
 				F43DEA8D228C07430055B590 /* Pregresses Type */,
 				F43DEA8A228BF97E0055B590 /* HSProgress Model */,
 				F433BD2C2289766200281381 /* Main.storyboard */,
-				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
 				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD312289766300281381 /* LaunchScreen.storyboard */,
 				F433BD282289766200281381 /* AppDelegate.swift */,
@@ -132,6 +132,14 @@
 				F43DEA9E228C0C510055B590 /* Interfaces.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F4BE6A5F228C2DA40044F3A2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
