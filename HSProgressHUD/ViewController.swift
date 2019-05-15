@@ -12,6 +12,7 @@ final class ViewController: UIViewController {
 
     let shapeLayer = CAShapeLayer()
     let trackShapeLayer = CAShapeLayer()
+    private lazy var secondTrackShapeLayer = CAShapeLayer()
     var pulsatingLayer: CAShapeLayer!
     
     let color = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
@@ -53,6 +54,15 @@ final class ViewController: UIViewController {
         pulsatingLayer.strokeColor = color.withAlphaComponent(0.32).cgColor
         view.layer.addSublayer(pulsatingLayer)
         
+        secondTrackShapeLayer = CAShapeLayer()
+        secondTrackShapeLayer.position = view.center
+        secondTrackShapeLayer.path = circularTrackPath.cgPath
+        secondTrackShapeLayer.lineCap = CAShapeLayerLineCap.round
+        secondTrackShapeLayer.lineWidth = 20
+        secondTrackShapeLayer.fillColor = UIColor.clear.cgColor
+        secondTrackShapeLayer.strokeColor = UIColor.gray.withAlphaComponent(0.4 ).cgColor
+        view.layer.addSublayer(secondTrackShapeLayer)
+        
         animatePulsatingLayer()
         
         trackShapeLayer.position = view.center
@@ -64,10 +74,6 @@ final class ViewController: UIViewController {
         view.layer.addSublayer(trackShapeLayer)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-        
-        
-        
-        
     }
     
     private func animatePulsatingLayer() {
@@ -75,6 +81,7 @@ final class ViewController: UIViewController {
         let animation = CABasicAnimation(keyPath: "transform.scale")
         let animation2 = CABasicAnimation(keyPath: "opacity")
         let animation3 = CABasicAnimation(keyPath: "transform.scale.x")
+        let animation4 = CABasicAnimation(keyPath: "transform.scale")
         
         animation3.fromValue = 1
         animation3.toValue = 1.02
@@ -95,6 +102,17 @@ final class ViewController: UIViewController {
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
         animation.autoreverses = true
         animation.repeatCount = .infinity
+        
+        animation4.toValue = 0.95
+        animation4.duration = 1.6
+        animation4.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
+        animation4.autoreverses = true
+        animation4.repeatCount = .infinity
+        
+        
+        secondTrackShapeLayer.add(animation4, forKey: "akbar")
+        
+        
         pulsatingLayer.add(animation, forKey: "shndrsTransform")
         label.layer.add(animation2, forKey: "shndrsOpacity")
         label.layer.add(animation3, forKey: "shndrsXTrans")

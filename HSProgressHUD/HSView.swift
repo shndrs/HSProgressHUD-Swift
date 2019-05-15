@@ -9,12 +9,12 @@
 import UIKit
 
 fileprivate protocol HSViewHUD {
-    func dismiss() -> Void
     func show() -> Void
+    func dismiss(completion: @escaping ()->Void) -> Void
 }
 
 fileprivate enum ShapeLayerType {
-    case track, pulsate
+    case track, pulsate, innerPulsate
 }
 
 public class HSView: UIView {
@@ -27,6 +27,7 @@ public class HSView: UIView {
     private var pulsateLayerColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     private lazy var trackShapeLayer = CAShapeLayer()
     private lazy var pulsateShapeLayer = CAShapeLayer()
+    private lazy var secondTrackShapeLayer = CAShapeLayer()
     private lazy var circularTrackPath = UIBezierPath(arcCenter: .zero,
                                                       radius: 100,
                                                       startAngle: -(.pi) / 2, endAngle:2 * .pi,
@@ -65,6 +66,8 @@ public class HSView: UIView {
             shapeLayer.strokeColor = trackLayerColor.cgColor
         case .pulsate:
             shapeLayer.strokeColor = pulsateLayerColor.withAlphaComponent(0.34).cgColor
+        case .innerPulsate:
+            shapeLayer.strokeColor = UIColor.gray.withAlphaComponent(0.4).cgColor
         }
         
         shapeLayer.position = transView.center
@@ -74,7 +77,6 @@ public class HSView: UIView {
         shapeLayer.fillColor = UIColor.clear.cgColor
         transView.layer.addSublayer(shapeLayer)
     }
-
 }
 
 // MARK: - Life Cycle
@@ -109,7 +111,7 @@ extension HSView: HSViewHUD {
     
     /// Dismiss HSProgressHUD with fadeOut animation
     
-    public func dismiss() {
+    public func dismiss(completion: @escaping ()->Void) {
         
         transView.alpha = 1
         
@@ -118,6 +120,7 @@ extension HSView: HSViewHUD {
             self.transView.layoutIfNeeded()
         }) { (success) in
             self.transView.removeFromSuperview()
+            completion()
         }
     }
 }
@@ -128,6 +131,7 @@ extension HSView {
     
     private func setUI() {
         layerGenerator(shapeLayer: pulsateShapeLayer, type: .pulsate)
+        layerGenerator(shapeLayer: secondTrackShapeLayer, type: .innerPulsate)
         setAnimations()
         layerGenerator(shapeLayer: trackShapeLayer, type: .track)
     }
@@ -184,15 +188,21 @@ extension HSView {
     fileprivate func setAnimations() {
         
         let transformAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
         
-        tarnsformXScaleAnimation.fromValue = 1
-        tarnsformXScaleAnimation.toValue = 1.02
-        tarnsformXScaleAnimation.duration = 1.0
-        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformXScaleAnimation.autoreverses = true
-        tarnsformXScaleAnimation.repeatCount = .infinity
+        transformAnimation.toValue = 1.13
+        transformAnimation.duration = 0.8
+        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
+        transformAnimation.autoreverses = true
+        transformAnimation.repeatCount = .infinity
+        
+        transformAnimationInnerPulsate.toValue = 0.95
+        transformAnimationInnerPulsate.duration = 1.6
+        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
+        transformAnimationInnerPulsate.autoreverses = true
+        transformAnimationInnerPulsate.repeatCount = .infinity
         
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5
@@ -201,15 +211,16 @@ extension HSView {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        transformAnimation.toValue = 1.13
-        transformAnimation.duration = 0.8
-        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
-        transformAnimation.autoreverses = true
-        transformAnimation.repeatCount = .infinity
+        tarnsformXScaleAnimation.fromValue = 1
+        tarnsformXScaleAnimation.toValue = 1.02
+        tarnsformXScaleAnimation.duration = 1.0
+        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        tarnsformXScaleAnimation.autoreverses = true
+        tarnsformXScaleAnimation.repeatCount = .infinity
         
         pulsateShapeLayer.add(transformAnimation, forKey: "shndrsTransformKey")
+        secondTrackShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
         titleLabel.layer.add(tarnsformXScaleAnimation, forKey: "shndrsXTransKey")
     }
-  
 }
