@@ -27,7 +27,10 @@ public class HSView: UIView {
     private var pulsateLayerColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     private lazy var trackShapeLayer = CAShapeLayer()
     private lazy var pulsateShapeLayer = CAShapeLayer()
-    private lazy var circularTrackPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: -(.pi) / 2, endAngle:2 * .pi, clockwise: true)
+    private lazy var circularTrackPath = UIBezierPath(arcCenter: .zero,
+                                                      radius: 100,
+                                                      startAngle: -(.pi) / 2, endAngle:2 * .pi,
+                                                      clockwise: true)
     
     lazy var titleLabel: UILabel = {
         let lbl = UILabel()
