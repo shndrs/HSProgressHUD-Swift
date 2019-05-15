@@ -10,40 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HSProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg5" translatesAutoresizingMaskIntoConstraints="NO" id="rl1-Tb-CO5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uX-6x-UD4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.81508819021595091" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="rl1-Tb-CO5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0tw-T5-E88"/>
-                            <constraint firstItem="6uX-6x-UD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BPk-kl-Mpr"/>
-                            <constraint firstItem="6uX-6x-UD4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IgH-iU-adb"/>
-                            <constraint firstAttribute="bottom" secondItem="6uX-6x-UD4" secondAttribute="bottom" id="KlV-74-sxP"/>
-                            <constraint firstAttribute="bottom" secondItem="rl1-Tb-CO5" secondAttribute="bottom" id="UmR-2c-y6U"/>
-                            <constraint firstItem="rl1-Tb-CO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VYS-71-E4g"/>
-                            <constraint firstItem="rl1-Tb-CO5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p0s-bV-BKN"/>
-                            <constraint firstItem="6uX-6x-UD4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y3i-NW-bFI"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="905" y="-526"/>
-        </scene>
         <!--Second View Controller-->
         <scene sceneID="Zxu-6g-BXl">
             <objects>
@@ -55,28 +21,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg5" translatesAutoresizingMaskIntoConstraints="NO" id="r6A-BZ-Td9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-0Q-sIj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.81508819020000001" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ba5-0Q-sIj" secondAttribute="bottom" id="8xc-Sc-6YQ"/>
-                            <constraint firstItem="ba5-0Q-sIj" firstAttribute="leading" secondItem="g4Q-gt-jjQ" secondAttribute="leading" id="Hkd-pf-adC"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="trailing" secondItem="g4Q-gt-jjQ" secondAttribute="trailing" id="Two-tX-ud6"/>
-                            <constraint firstItem="ba5-0Q-sIj" firstAttribute="trailing" secondItem="g4Q-gt-jjQ" secondAttribute="trailing" id="bkS-ks-fs8"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="leading" secondItem="g4Q-gt-jjQ" secondAttribute="leading" id="cQm-qz-KYb"/>
                             <constraint firstAttribute="bottom" secondItem="r6A-BZ-Td9" secondAttribute="bottom" id="d2E-tB-s7l"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="top" secondItem="6m6-T6-XlY" secondAttribute="top" id="eY4-kY-IWs"/>
-                            <constraint firstItem="ba5-0Q-sIj" firstAttribute="top" secondItem="6m6-T6-XlY" secondAttribute="top" id="t0q-Jt-KdT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g4Q-gt-jjQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg8-zF-qtl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="133"/>
+            <point key="canvasLocation" x="167" y="-477"/>
         </scene>
     </scenes>
     <resources>

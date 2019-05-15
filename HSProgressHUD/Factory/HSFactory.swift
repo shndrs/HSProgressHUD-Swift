@@ -23,6 +23,9 @@ public struct HSProgressFactory {
         case .type3:
             
             return TypeThree(progress: progress)
+        case .type4:
+            
+            return TypeFour(progress: progress)
         }
     }
 }

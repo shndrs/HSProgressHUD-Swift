@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F433BD292289766200281381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD282289766200281381 /* AppDelegate.swift */; };
-		F433BD2B2289766200281381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD2A2289766200281381 /* ViewController.swift */; };
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
 		F433BD332289766300281381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD312289766300281381 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,7 @@
 		F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA98228C08340055B590 /* HSBaseView.swift */; };
 		F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9B228C08950055B590 /* HSFactory.swift */; };
 		F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9E228C0C510055B590 /* Interfaces.swift */; };
+		F43DEAA1228C1D950055B590 /* TypeFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* TypeFour.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,6 @@
 /* Begin PBXFileReference section */
 		F433BD252289766200281381 /* HSProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F433BD282289766200281381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F433BD2A2289766200281381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F433BD2D2289766200281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F433BD2F2289766300281381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F433BD322289766300281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		F43DEA98228C08340055B590 /* HSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBaseView.swift; sourceTree = "<group>"; };
 		F43DEA9B228C08950055B590 /* HSFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSFactory.swift; sourceTree = "<group>"; };
 		F43DEA9E228C0C510055B590 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		F43DEAA0228C1D950055B590 /* TypeFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFour.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,15 +79,14 @@
 				F43DEA97228C08160055B590 /* HSBaseView */,
 				F43DEA8D228C07430055B590 /* Pregresses Type */,
 				F43DEA8A228BF97E0055B590 /* HSProgress Model */,
-				F433BD282289766200281381 /* AppDelegate.swift */,
-				F433BD2A2289766200281381 /* ViewController.swift */,
 				F433BD2C2289766200281381 /* Main.storyboard */,
+				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
 				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD312289766300281381 /* LaunchScreen.storyboard */,
+				F433BD282289766200281381 /* AppDelegate.swift */,
 				F433BD342289766300281381 /* Info.plist */,
 				F4488CBD228AC8D800D61AF0 /* HSView.swift */,
 				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
-				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
 			);
 			path = HSProgressHUD;
 			sourceTree = "<group>";
@@ -103,6 +102,7 @@
 		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
 			isa = PBXGroup;
 			children = (
+				F43DEAA0228C1D950055B590 /* TypeFour.swift */,
 				F43DEA95228C07C40055B590 /* TypeThree.swift */,
 				F43DEA93228C07B90055B590 /* TypeTwo.swift */,
 				F43DEA91228C07AD0055B590 /* TypeOne.swift */,
@@ -205,13 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F433BD2B2289766200281381 /* ViewController.swift in Sources */,
 				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
 				F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */,
 				F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */,
 				F43DEA96228C07C40055B590 /* TypeThree.swift in Sources */,
 				F43DEA92228C07AD0055B590 /* TypeOne.swift in Sources */,
+				F43DEAA1228C1D950055B590 /* TypeFour.swift in Sources */,
 				F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */,
 				F43DEA94228C07B90055B590 /* TypeTwo.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,

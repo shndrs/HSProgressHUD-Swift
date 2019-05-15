@@ -10,19 +10,19 @@ import UIKit
 
 public struct HSProgress {
     
-    public var strokeColor:UIColor!
-    public var strokeWidth:CGFloat!
-    public var mainPulsateColor:UIColor!
-    public var secondPulsateColor:UIColor!
-    public var title:String!
-    public var font:UIFont!
-    public var titleTextColor:UIColor!
-    public var transViewBackgroundColor:UIColor!
-    public var radius:CGFloat!
-    public var animationOption:HSAnimationOptions!
+    public var strokeColor: UIColor!
+    public var strokeWidth: CGFloat!
+    public var mainPulsateColor: UIColor!
+    public var secondPulsateColor: UIColor!
+    public var title: String!
+    public var font: UIFont!
+    public var titleTextColor: UIColor!
+    public var transViewBackgroundColor: UIColor!
+    public var radius: CGFloat!
+    public var animationOption: HSAnimationOptions!
     
     public enum HSAnimationOptions {
-        case type1, type2, type3
+        case type1, type2, type3, type4
     }
     
     init(strokeColor:UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1),
@@ -30,7 +30,7 @@ public struct HSProgress {
          mainPulsateColor:UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1),
          secondPulsateColor:UIColor = UIColor.gray,
          title:String = "Please Wait...",
-         font:UIFont = UIFont(name: "AvenirNext-Heavy", size: 16)!,
+         font:UIFont = UIFont(name: "AvenirNext-Heavy", size: 17)!,
          titleTextColor:UIColor = .white,
          transViewBackgroundColor:UIColor = UIColor.black,
          radius:CGFloat = 105.0,
