@@ -8,8 +8,11 @@
 
 import UIKit
 
-final class TypeOne: HSBaseView, HSProgressAnimation, HSProgressProtocol {
-    
+final class TypeOne: HSBaseView {}
+
+// MARK: HSProgressProtocol Impelementation
+
+extension TypeOne: HSProgressProtocol {
     func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
@@ -35,6 +38,11 @@ final class TypeOne: HSBaseView, HSProgressAnimation, HSProgressProtocol {
             completion?()
         }
     }
+}
+
+// MARK: Set Animation And Layers
+
+extension TypeOne: HSProgressAnimation {
     
     internal func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)

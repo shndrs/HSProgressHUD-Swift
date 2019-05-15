@@ -103,35 +103,11 @@
 		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
 			isa = PBXGroup;
 			children = (
-				F43DEA90228C07600055B590 /* TypeThree */,
-				F43DEA8F228C07570055B590 /* TypeTwo */,
-				F43DEA8E228C074E0055B590 /* TypeOne */,
-			);
-			path = "Pregresses Type";
-			sourceTree = "<group>";
-		};
-		F43DEA8E228C074E0055B590 /* TypeOne */ = {
-			isa = PBXGroup;
-			children = (
+				F43DEA95228C07C40055B590 /* TypeThree.swift */,
+				F43DEA93228C07B90055B590 /* TypeTwo.swift */,
 				F43DEA91228C07AD0055B590 /* TypeOne.swift */,
 			);
-			path = TypeOne;
-			sourceTree = "<group>";
-		};
-		F43DEA8F228C07570055B590 /* TypeTwo */ = {
-			isa = PBXGroup;
-			children = (
-				F43DEA93228C07B90055B590 /* TypeTwo.swift */,
-			);
-			path = TypeTwo;
-			sourceTree = "<group>";
-		};
-		F43DEA90228C07600055B590 /* TypeThree */ = {
-			isa = PBXGroup;
-			children = (
-				F43DEA95228C07C40055B590 /* TypeThree.swift */,
-			);
-			path = TypeThree;
+			path = "Pregresses Type";
 			sourceTree = "<group>";
 		};
 		F43DEA97228C08160055B590 /* HSBaseView */ = {
