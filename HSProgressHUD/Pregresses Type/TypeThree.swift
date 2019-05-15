@@ -53,23 +53,37 @@ extension TypeThree: HSProgressAnimation {
     
     internal func setAnimation() {
         
-        let transformAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
+        mainShapeLayer.lineWidth = 5.0
+        
+        let lineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
+        let transformAnimation = CABasicAnimation(keyPath: "lineWidth")
+        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "lineWidth")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
         
-        transformAnimation.fromValue = 0
-        transformAnimation.toValue = CGFloat.pi * 2
-        transformAnimation.duration = 4
-        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        lineWidthAnimation.toValue = 20.0
+        lineWidthAnimation.duration = 1.5
+        lineWidthAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        lineWidthAnimation.autoreverses = true
+        lineWidthAnimation.repeatCount = .greatestFiniteMagnitude
+        
+        transformAnimation.toValue = 20.0
+        transformAnimation.duration = 1
+        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transformAnimation.autoreverses = true
-        transformAnimation.repeatCount = .infinity
+        transformAnimation.repeatCount = .greatestFiniteMagnitude
         
-        transformAnimationInnerPulsate.toValue = 1.1
-        transformAnimationInnerPulsate.duration = 0.8
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        transformAnimationInnerPulsate.toValue = 15.0
+        transformAnimationInnerPulsate.duration = 2
+        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .infinity
+        transformAnimationInnerPulsate.repeatCount = .greatestFiniteMagnitude
+        
+        tarnsformXScaleAnimation.toValue = 10.0
+        tarnsformXScaleAnimation.duration = 2.5
+        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        tarnsformXScaleAnimation.autoreverses = true
+        tarnsformXScaleAnimation.repeatCount = .greatestFiniteMagnitude
         
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5
@@ -77,17 +91,11 @@ extension TypeThree: HSProgressAnimation {
         opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
-        
-        tarnsformXScaleAnimation.toValue = 1.05
-        tarnsformXScaleAnimation.duration = 1.0
-        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformXScaleAnimation.autoreverses = true
-        tarnsformXScaleAnimation.repeatCount = .infinity
-        
-        mainShapeLayer.add(tarnsformXScaleAnimation, forKey: "shndRS")
+
+        mainPulsateShapeLayer.add(opacityAnimation, forKey: "mainPulsateOpacity")
         mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsRotationKey")
         secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        titleLabel.layer.add(tarnsformXScaleAnimation, forKey: "shndrsXTransKey")
+        mainShapeLayer.add(lineWidthAnimation, forKey: "lineWidthAnimation")
     }
 }

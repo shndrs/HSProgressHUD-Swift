@@ -65,7 +65,7 @@ open class HSBaseView: UIView {
         shapeLayer.position = transView.center
         shapeLayer.path = circularTrackPath.cgPath
         shapeLayer.lineCap = CAShapeLayerLineCap.round
-        shapeLayer.lineWidth = 20
+        shapeLayer.lineWidth = progress.strokeWidth
         shapeLayer.fillColor = UIColor.clear.cgColor
         transView.layer.addSublayer(shapeLayer)
     }

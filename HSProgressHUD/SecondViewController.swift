@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 final class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -18,7 +16,7 @@ final class SecondViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let a = HSProgress(animationOption: .type2)
+        let a = HSProgress(animationOption: .type3)
         
         let show = HSProgressFactory.set(progress: a)
         show.show()
