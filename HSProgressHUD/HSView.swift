@@ -132,8 +132,8 @@ extension HSView {
     private func setUI() {
         layerGenerator(shapeLayer: pulsateShapeLayer, type: .pulsate)
         layerGenerator(shapeLayer: secondTrackShapeLayer, type: .innerPulsate)
-        setAnimations()
         layerGenerator(shapeLayer: trackShapeLayer, type: .track)
+        setAnimations()
     }
 }
 

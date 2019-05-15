@@ -12,6 +12,7 @@
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
 		F433BD332289766300281381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD312289766300281381 /* LaunchScreen.storyboard */; };
+		F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		F433BD2F2289766300281381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F433BD322289766300281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F433BD342289766300281381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43DEA88228BD34B0055B590 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				F433BD342289766300281381 /* Info.plist */,
 				F4488CBD228AC8D800D61AF0 /* HSView.swift */,
 				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
+				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
 			);
 			path = HSProgressHUD;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				F433BD2B2289766200281381 /* ViewController.swift in Sources */,
 				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
+				F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */,
 				F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

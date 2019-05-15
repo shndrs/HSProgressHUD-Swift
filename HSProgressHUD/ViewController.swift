@@ -54,7 +54,6 @@ final class ViewController: UIViewController {
         pulsatingLayer.strokeColor = color.withAlphaComponent(0.32).cgColor
         view.layer.addSublayer(pulsatingLayer)
         
-        secondTrackShapeLayer = CAShapeLayer()
         secondTrackShapeLayer.position = view.center
         secondTrackShapeLayer.path = circularTrackPath.cgPath
         secondTrackShapeLayer.lineCap = CAShapeLayerLineCap.round
@@ -72,8 +71,6 @@ final class ViewController: UIViewController {
         trackShapeLayer.lineWidth = 20
         trackShapeLayer.fillColor = UIColor.clear.cgColor
         view.layer.addSublayer(trackShapeLayer)
-        
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
     private func animatePulsatingLayer() {
@@ -109,27 +106,10 @@ final class ViewController: UIViewController {
         animation4.autoreverses = true
         animation4.repeatCount = .infinity
         
-        
         secondTrackShapeLayer.add(animation4, forKey: "akbar")
-        
-        
         pulsatingLayer.add(animation, forKey: "shndrsTransform")
         label.layer.add(animation2, forKey: "shndrsOpacity")
         label.layer.add(animation3, forKey: "shndrsXTrans")
-    }
-    
-    fileprivate func circleAnimation() {
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = 1
-        basicAnimation.duration = 2
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
-        basicAnimation.isRemovedOnCompletion = false
-        shapeLayer.add(basicAnimation, forKey: "shndrs")
-    }
-    
-    @objc private func handleTap() {
-        circleAnimation()
-        
     }
 }
 
