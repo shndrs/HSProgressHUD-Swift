@@ -8,11 +8,6 @@
 
 import UIKit
 
-public protocol HSProgressAnimation {
-    func setAnimation() -> Void
-    func setLayers() -> Void
-}
-
 final class TypeOne: HSBaseView, HSProgressAnimation, HSProgressProtocol {
     
     func show() {

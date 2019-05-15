@@ -8,6 +8,10 @@
 
 import UIKit
 
+public enum ShapeLayerType {
+    case track, pulsate, innerPulsate
+}
+
 open class HSBaseView: UIView {
     
     private var progress: HSProgress

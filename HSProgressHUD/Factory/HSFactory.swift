@@ -19,10 +19,10 @@ public struct HSProgressFactory {
             return TypeOne(progress: progress)
         case .type2:
             
-            return HSAnimationTypeOne(progress: progress)
+            return TypeOne(progress: progress)
         case .type3:
             
-            return HSAnimationTypeOne(progress: progress)
+            return TypeOne(progress: progress)
         }
     }
 }

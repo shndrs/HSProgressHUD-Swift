@@ -8,24 +8,13 @@
 
 import UIKit
 
-public protocol HSProgressProtocol {
-    func show() -> Void
-    func dismiss(completion: (()->Void)?) -> Void
-}
 
-public enum ShapeLayerType {
-    case track, pulsate, innerPulsate
-}
 
 final class SecondViewController: UIViewController {
-    
-    var ab:Bool = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
