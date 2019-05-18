@@ -9,7 +9,7 @@
 import UIKit
 
 public enum HSAnimationOptions {
-    case heartBeat, xRotation, lineLayer, lordOfTheRing
+    case heartBeat, xRotation, lineLayer, lordOfTheRings
 }
 
 @requires_stored_property_inits public class HSProgress {
@@ -43,7 +43,6 @@ public enum HSAnimationOptions {
     
     /// choose diffrent kind of animations by changing this property (by default is HSAnimationOptions.heartBeat)
     public var animationOption: HSAnimationOptions = .heartBeat
-    
     
     
     public typealias BuilderClosure = (HSProgress) -> ()

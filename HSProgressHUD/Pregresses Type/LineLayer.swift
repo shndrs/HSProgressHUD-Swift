@@ -23,6 +23,7 @@ extension LineLayer: HSProgressProtocol {
         UIApplication.shared.keyWindow?.addSubview(transView)
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            
             self.transView.alpha = 1
             self.transView.layoutIfNeeded()
         })
@@ -31,8 +32,10 @@ extension LineLayer: HSProgressProtocol {
     public func dismiss(completion: (() -> Void)?) {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            
             self.transView.alpha = 0
             self.transView.layoutIfNeeded()
+            
         }) { (success) in
             
             self.transView.removeFromSuperview()

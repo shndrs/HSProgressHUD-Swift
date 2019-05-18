@@ -28,7 +28,7 @@ public struct HSProgressHUD {
             
             return LineLayer(progress: progress)
             
-        case .lordOfTheRing:
+        case .lordOfTheRings:
             
             return LordOfTheRing(progress: progress)
             
