@@ -10,7 +10,7 @@ import Foundation
 
 public struct HSProgressHUD {
     
-    ///This is a Factory Method That return a HSProgressProtocol
+    ///A Factory method That returns a HSProgressProtocol to access show and dismiss functions
     
     public static func set(progress:HSProgress) -> HSProgressProtocol {
         
