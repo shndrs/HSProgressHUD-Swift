@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class TypeFour: HSBaseView {}
+final public class TypeFour: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
 extension TypeFour: HSProgressProtocol {
-    func show() {
+    public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -27,7 +27,7 @@ extension TypeFour: HSProgressProtocol {
         })
     }
     
-    func dismiss(completion: (() -> Void)?) {
+    public func dismiss(completion: (() -> Void)?) {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.transView.alpha = 0
@@ -44,16 +44,14 @@ extension TypeFour: HSProgressProtocol {
 
 extension TypeFour: HSProgressAnimation {
     
-    internal func setLayers() {
+    public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
         layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
         layerGenerator(shapeLayer: mainShapeLayer, type: .track)
         setAnimation()
     }
     
-    internal func setAnimation() {
-        
-        
+    public func setAnimation() {
         
         mainShapeLayer.lineDashPattern = [5]
         
@@ -65,15 +63,11 @@ extension TypeFour: HSProgressAnimation {
         
         mainShapeLayer.add(lineDashPhaseAnimation, forKey: "lineDashPhaseAnimation")
         
-
-        
-        
         let transformAnimation = CABasicAnimation(keyPath: "lineWidth")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "lineWidth")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
 //        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
 
-        
         transformAnimationInnerPulsate.toValue = 15.0
         transformAnimationInnerPulsate.duration = 2
         transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)

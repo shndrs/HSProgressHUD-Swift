@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class TypeThree: HSBaseView {}
+final public class TypeThree: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
 extension TypeThree: HSProgressProtocol {
-    func show() {
+    public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -27,7 +27,7 @@ extension TypeThree: HSProgressProtocol {
         })
     }
     
-    func dismiss(completion: (() -> Void)?) {
+    public func dismiss(completion: (() -> Void)?) {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.transView.alpha = 0
@@ -44,14 +44,14 @@ extension TypeThree: HSProgressProtocol {
 
 extension TypeThree: HSProgressAnimation {
     
-    internal func setLayers() {
+    public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
         layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
         layerGenerator(shapeLayer: mainShapeLayer, type: .track)
         setAnimation()
     }
     
-    internal func setAnimation() {
+    public func setAnimation() {
         
         mainShapeLayer.lineWidth = 5.0
         

@@ -10,7 +10,7 @@ import Foundation
 
 public struct HSProgressFactory {
     
-    static func set(progress:HSProgress) -> HSProgressProtocol {
+    public static func set(progress:HSProgress) -> HSProgressProtocol {
         
         switch progress.animationOption! {
             

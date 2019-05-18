@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class TypeTwo: HSBaseView {}
+final public class TypeTwo: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
 extension TypeTwo: HSProgressProtocol {
-    func show() {
+    public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -27,7 +27,7 @@ extension TypeTwo: HSProgressProtocol {
         })
     }
     
-    func dismiss(completion: (() -> Void)?) {
+    public func dismiss(completion: (() -> Void)?) {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.transView.alpha = 0
@@ -44,14 +44,14 @@ extension TypeTwo: HSProgressProtocol {
 
 extension TypeTwo: HSProgressAnimation {
     
-    internal func setLayers() {
+    public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
         layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
         layerGenerator(shapeLayer: mainShapeLayer, type: .track)
         setAnimation()
     }
     
-    internal func setAnimation() {
+    public func setAnimation() {
         
         let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
