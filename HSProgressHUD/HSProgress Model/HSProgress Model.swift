@@ -8,8 +8,12 @@
 
 import UIKit
 
-@requires_stored_property_inits
-public class HSProgress {
+public enum HSAnimationOptions {
+    case heartBeat, xRotation, lineLayer, lordOfTheRing
+}
+
+
+@requires_stored_property_inits public class HSProgress {
     
     public var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     public var strokeWidth: CGFloat = 20.0
@@ -22,9 +26,6 @@ public class HSProgress {
     public var radius: CGFloat = 105.0
     public var animationOption: HSAnimationOptions = .heartBeat
     
-    public enum HSAnimationOptions {
-        case heartBeat, xRotation, lineLayer, lordOfTheRing
-    }
     public typealias BuilderClosure = (HSProgress) -> ()
     
     public required init() {}

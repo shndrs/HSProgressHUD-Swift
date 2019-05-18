@@ -17,12 +17,14 @@ final class SecondViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let progress = HSProgress { (options) in
-            options.radius = 120
+            
+            options.radius = 100
             options.mainPulsateColor = .brown
-            options.strokeWidth = 20
+            options.strokeWidth = 17
             options.secondPulsateColor = .gray
-            options.strokeColor = .orange
-            options.animationOption = .lordOfTheRing
+            options.strokeColor = .darkGray
+            options.title = "shndrs and hnk presents"
+            options.animationOption = HSAnimationOptions.heartBeat
             options.font = UIFont(name: "Papyrus", size: 18)!
         }
         let hud = HSProgressHUD.set(progress: progress)

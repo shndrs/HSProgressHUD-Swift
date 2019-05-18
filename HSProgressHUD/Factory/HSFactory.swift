@@ -10,6 +10,8 @@ import Foundation
 
 public struct HSProgressHUD {
     
+    ///This is a Factory Method That return a HSProgressProtocol
+    
     public static func set(progress:HSProgress) -> HSProgressProtocol {
         
         switch progress.animationOption {
@@ -17,16 +19,19 @@ public struct HSProgressHUD {
         case .heartBeat:
             
             return HeartBeat(progress: progress)
+            
         case .xRotation:
             
             return XRotation(progress: progress)
+            
         case .lineLayer:
             
             return LineLayer(progress: progress)
+            
         case .lordOfTheRing:
             
             return LordOfTheRing(progress: progress)
+            
         }
     }
 }
-

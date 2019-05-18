@@ -13,9 +13,10 @@ final public class LordOfTheRing: HSBaseView {}
 // MARK: HSProgressProtocol Impelementation
 
 extension LordOfTheRing: HSProgressProtocol {
+    
     public func show() {
         transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
+        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 110)
         titleLabel.center = transView.center
         transView.addSubview(titleLabel)
         setLayers()
@@ -91,4 +92,3 @@ extension LordOfTheRing: HSProgressAnimation {
         titleLabel.layer.add(tarnsformScaleAnimation, forKey: "shndrsXTransKey")
     }
 }
-

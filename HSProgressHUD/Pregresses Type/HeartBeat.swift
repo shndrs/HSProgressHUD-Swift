@@ -13,6 +13,7 @@ final public class HeartBeat: HSBaseView {}
 // MARK: HSProgressProtocol Impelementation
 
 extension HeartBeat: HSProgressProtocol {
+    
     public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
