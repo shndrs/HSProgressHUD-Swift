@@ -18,7 +18,6 @@ open class HSBaseView: UIView {
     public lazy var mainShapeLayer = CAShapeLayer()
     public lazy var mainPulsateShapeLayer = CAShapeLayer()
     public lazy var secondPulsateShapeLayer = CAShapeLayer()
-    
     public lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = progress.title
@@ -70,4 +69,3 @@ open class HSBaseView: UIView {
         transView.layer.addSublayer(shapeLayer)
     }
 }
-

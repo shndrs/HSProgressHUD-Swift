@@ -1,5 +1,5 @@
 //
-//  TypeThree.swift
+//  LineLayer.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/15/19.

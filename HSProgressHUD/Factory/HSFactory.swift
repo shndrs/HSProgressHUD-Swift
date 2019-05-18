@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct HSProgressFactory {
+public struct HSProgressHUD {
     
     public static func set(progress:HSProgress) -> HSProgressProtocol {
         
@@ -23,9 +23,9 @@ public struct HSProgressFactory {
         case .lineLayer:
             
             return LineLayer(progress: progress)
-        case .type4:
+        case .lordOfTheRing:
             
-            return TypeFour(progress: progress)
+            return LordOfTheRing(progress: progress)
         }
     }
 }

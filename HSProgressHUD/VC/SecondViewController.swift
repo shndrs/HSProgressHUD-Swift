@@ -18,17 +18,18 @@ final class SecondViewController: UIViewController {
         
         let progress = HSProgress { (options) in
             options.radius = 120
-            options.mainPulsateColor = .yellow
+            options.mainPulsateColor = .brown
             options.strokeWidth = 20
             options.secondPulsateColor = .gray
-            options.strokeColor = .yellow
-            options.animationOption = .xRotation
+            options.strokeColor = .orange
+            options.animationOption = .lordOfTheRing
+            options.font = UIFont(name: "Papyrus", size: 18)!
         }
-        let hud = HSProgressFactory.set(progress: progress)
+        let hud = HSProgressHUD.set(progress: progress)
         hud.show()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             hud.dismiss(completion: nil)
         }
     }
 }
-

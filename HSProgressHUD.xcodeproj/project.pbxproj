@@ -19,7 +19,7 @@
 		F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA98228C08340055B590 /* HSBaseView.swift */; };
 		F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9B228C08950055B590 /* HSFactory.swift */; };
 		F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9E228C0C510055B590 /* Interfaces.swift */; };
-		F43DEAA1228C1D950055B590 /* TypeFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* TypeFour.swift */; };
+		F43DEAA1228C1D950055B590 /* LordOfTheRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		F43DEA98228C08340055B590 /* HSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBaseView.swift; sourceTree = "<group>"; };
 		F43DEA9B228C08950055B590 /* HSFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSFactory.swift; sourceTree = "<group>"; };
 		F43DEA9E228C0C510055B590 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
-		F43DEAA0228C1D950055B590 /* TypeFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFour.swift; sourceTree = "<group>"; };
+		F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRing.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +102,7 @@
 		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
 			isa = PBXGroup;
 			children = (
-				F43DEAA0228C1D950055B590 /* TypeFour.swift */,
+				F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */,
 				F43DEA95228C07C40055B590 /* LineLayer.swift */,
 				F43DEA93228C07B90055B590 /* XRotation.swift */,
 				F43DEA91228C07AD0055B590 /* HeartBeat.swift */,
@@ -219,7 +219,7 @@
 				F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */,
 				F43DEA96228C07C40055B590 /* LineLayer.swift in Sources */,
 				F43DEA92228C07AD0055B590 /* HeartBeat.swift in Sources */,
-				F43DEAA1228C1D950055B590 /* TypeFour.swift in Sources */,
+				F43DEAA1228C1D950055B590 /* LordOfTheRing.swift in Sources */,
 				F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */,
 				F43DEA94228C07B90055B590 /* XRotation.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,

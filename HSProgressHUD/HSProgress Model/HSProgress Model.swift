@@ -11,25 +11,25 @@ import UIKit
 @requires_stored_property_inits
 public class HSProgress {
     
-    var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
-    var strokeWidth: CGFloat = 20.0
-    var mainPulsateColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
-    var secondPulsateColor: UIColor = UIColor.gray
-    var title: String = "Please Wait..."
-    var font: UIFont = UIFont(name: "AvenirNext-Heavy", size: 17)!
-    var titleTextColor: UIColor = .white
-    var transViewBackgroundColor: UIColor = UIColor.black
-    var radius: CGFloat = 105.0
-    var animationOption: HSAnimationOptions = .heartBeat
+    public var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    public var strokeWidth: CGFloat = 20.0
+    public var mainPulsateColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    public var secondPulsateColor: UIColor = UIColor.gray
+    public var title: String = "Please Wait..."
+    public var font: UIFont = UIFont(name: "AvenirNext-Heavy", size: 17)!
+    public var titleTextColor: UIColor = .white
+    public var transViewBackgroundColor: UIColor = UIColor.black
+    public var radius: CGFloat = 105.0
+    public var animationOption: HSAnimationOptions = .heartBeat
     
     public enum HSAnimationOptions {
-        case heartBeat, xRotation, lineLayer, type4
+        case heartBeat, xRotation, lineLayer, lordOfTheRing
     }
-    
     public typealias BuilderClosure = (HSProgress) -> ()
+    
+    public required init() {}
     
     public init(closure:BuilderClosure) {
         closure(self)
     }
-    
 }

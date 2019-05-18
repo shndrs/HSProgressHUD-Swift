@@ -1,5 +1,5 @@
 //
-//  TypeFour.swift
+//  LordOfTheRing.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/15/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final public class TypeFour: HSBaseView {}
+final public class LordOfTheRing: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension TypeFour: HSProgressProtocol {
+extension LordOfTheRing: HSProgressProtocol {
     public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
@@ -42,7 +42,7 @@ extension TypeFour: HSProgressProtocol {
 
 // MARK: Set Animation And Layers
 
-extension TypeFour: HSProgressAnimation {
+extension LordOfTheRing: HSProgressAnimation {
     
     public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
@@ -53,27 +53,17 @@ extension TypeFour: HSProgressAnimation {
     
     public func setAnimation() {
         
-        mainShapeLayer.lineDashPattern = [5]
-        
-        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
-        lineDashPhaseAnimation.byValue = 5
-        lineDashPhaseAnimation.duration = 0.75
-        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
-        
-        mainShapeLayer.add(lineDashPhaseAnimation, forKey: "lineDashPhaseAnimation")
-        
-        let transformAnimation = CABasicAnimation(keyPath: "lineWidth")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "lineWidth")
+        let mainPulsateAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-//        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
-
-        transformAnimationInnerPulsate.toValue = 15.0
-        transformAnimationInnerPulsate.duration = 2
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        
+        transformAnimationInnerPulsate.toValue = 1.1
+        transformAnimationInnerPulsate.duration = 0.8
+        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .greatestFiniteMagnitude
-
+        transformAnimationInnerPulsate.repeatCount = .infinity
+        
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5
         opacityAnimation.duration = 0.4
@@ -81,10 +71,24 @@ extension TypeFour: HSProgressAnimation {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        mainPulsateShapeLayer.add(opacityAnimation, forKey: "mainPulsateOpacity")
-        mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsRotationKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
+        tarnsformScaleAnimation.toValue = 1.05
+        tarnsformScaleAnimation.duration = 1.0
+        tarnsformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        tarnsformScaleAnimation.autoreverses = true
+        tarnsformScaleAnimation.repeatCount = .infinity
+        
+        mainPulsateAnimation.toValue = 0.9
+        mainPulsateAnimation.fromValue = 1.14
+        mainPulsateAnimation.duration = 2
+        mainPulsateAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        mainPulsateAnimation.autoreverses = true
+        mainPulsateAnimation.repeatCount = .infinity
+        
+        mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
+        mainPulsateShapeLayer.add(mainPulsateAnimation, forKey: "shndrsMainPulsateKey")
+        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
+        titleLabel.layer.add(tarnsformScaleAnimation, forKey: "shndrsXTransKey")
     }
 }
 
