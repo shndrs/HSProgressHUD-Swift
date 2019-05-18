@@ -16,11 +16,18 @@ final class SecondViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let a = HSProgress(animationOption: .lineLayer)
-        let progress = HSProgressFactory.set(progress: a)
-        progress.show()
+        let progress = HSProgress { (options) in
+            options.radius = 120
+            options.mainPulsateColor = .yellow
+            options.strokeWidth = 20
+            options.secondPulsateColor = .gray
+            options.strokeColor = .yellow
+            options.animationOption = .xRotation
+        }
+        let hud = HSProgressFactory.set(progress: progress)
+        hud.show()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            progress.dismiss(completion: nil)
+            hud.dismiss(completion: nil)
         }
     }
 }

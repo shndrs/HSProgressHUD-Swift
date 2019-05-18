@@ -12,17 +12,17 @@ public struct HSProgressFactory {
     
     public static func set(progress:HSProgress) -> HSProgressProtocol {
         
-        switch progress.animationOption! {
+        switch progress.animationOption {
             
         case .heartBeat:
             
-            return TypeOne(progress: progress)
+            return HeartBeat(progress: progress)
         case .xRotation:
             
-            return TypeTwo(progress: progress)
+            return XRotation(progress: progress)
         case .lineLayer:
             
-            return TypeThree(progress: progress)
+            return LineLayer(progress: progress)
         case .type4:
             
             return TypeFour(progress: progress)

@@ -1,5 +1,5 @@
 //
-//  TypeOne.swift
+//  TypeTwo.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/15/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final public class TypeOne: HSBaseView {}
+final public class XRotation: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension TypeOne: HSProgressProtocol {
+extension XRotation: HSProgressProtocol {
     public func show() {
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
@@ -42,7 +42,7 @@ extension TypeOne: HSProgressProtocol {
 
 // MARK: Set Animation And Layers
 
-extension TypeOne: HSProgressAnimation {
+extension XRotation: HSProgressAnimation {
     
     public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
@@ -53,20 +53,21 @@ extension TypeOne: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let transformAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
+        let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         
-        transformAnimation.toValue = 1.13
-        transformAnimation.duration = 0.8
-        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
-        transformAnimation.autoreverses = true
-        transformAnimation.repeatCount = .infinity
+        rotationXAnimation.fromValue = 0
+        rotationXAnimation.toValue = CGFloat.pi * 2
+        rotationXAnimation.duration = 4
+        rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        rotationXAnimation.autoreverses = true
+        rotationXAnimation.repeatCount = .infinity
         
-        transformAnimationInnerPulsate.toValue = 0.95
-        transformAnimationInnerPulsate.duration = 1.6
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut )
+        transformAnimationInnerPulsate.toValue = 1.1
+        transformAnimationInnerPulsate.duration = 0.8
+        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         transformAnimationInnerPulsate.autoreverses = true
         transformAnimationInnerPulsate.repeatCount = .infinity
         
@@ -77,16 +78,16 @@ extension TypeOne: HSProgressAnimation {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        tarnsformXScaleAnimation.fromValue = 1
-        tarnsformXScaleAnimation.toValue = 1.02
-        tarnsformXScaleAnimation.duration = 1.0
-        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformXScaleAnimation.autoreverses = true
-        tarnsformXScaleAnimation.repeatCount = .infinity
+        tarnsformScaleAnimation.toValue = 1.05
+        tarnsformScaleAnimation.duration = 1.0
+        tarnsformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        tarnsformScaleAnimation.autoreverses = true
+        tarnsformScaleAnimation.repeatCount = .infinity
         
-        mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsTransformKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
+        mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
+        mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
+        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        titleLabel.layer.add(tarnsformXScaleAnimation, forKey: "shndrsXTransKey")
+        titleLabel.layer.add(tarnsformScaleAnimation, forKey: "shndrsXTransKey")
     }
 }

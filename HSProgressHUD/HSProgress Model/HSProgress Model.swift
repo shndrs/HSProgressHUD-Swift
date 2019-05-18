@@ -8,43 +8,28 @@
 
 import UIKit
 
-public struct HSProgress {
+@requires_stored_property_inits
+public class HSProgress {
     
-    public var strokeColor: UIColor!
-    public var strokeWidth: CGFloat!
-    public var mainPulsateColor: UIColor!
-    public var secondPulsateColor: UIColor!
-    public var title: String!
-    public var font: UIFont!
-    public var titleTextColor: UIColor!
-    public var transViewBackgroundColor: UIColor!
-    public var radius: CGFloat!
-    public var animationOption: HSAnimationOptions!
+    var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    var strokeWidth: CGFloat = 20.0
+    var mainPulsateColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    var secondPulsateColor: UIColor = UIColor.gray
+    var title: String = "Please Wait..."
+    var font: UIFont = UIFont(name: "AvenirNext-Heavy", size: 17)!
+    var titleTextColor: UIColor = .white
+    var transViewBackgroundColor: UIColor = UIColor.black
+    var radius: CGFloat = 105.0
+    var animationOption: HSAnimationOptions = .heartBeat
     
     public enum HSAnimationOptions {
         case heartBeat, xRotation, lineLayer, type4
     }
     
-    init(strokeColor:UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1),
-         strokeWidth:CGFloat = 20.0,
-         mainPulsateColor:UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1),
-         secondPulsateColor:UIColor = UIColor.gray,
-         title:String = "Please Wait...",
-         font:UIFont = UIFont(name: "AvenirNext-Heavy", size: 17)!,
-         titleTextColor:UIColor = .white,
-         transViewBackgroundColor:UIColor = UIColor.black,
-         radius:CGFloat = 105.0,
-         animationOption:HSAnimationOptions = .heartBeat) {
-        
-        self.strokeColor = strokeColor
-        self.strokeWidth = strokeWidth
-        self.mainPulsateColor = mainPulsateColor
-        self.secondPulsateColor = secondPulsateColor
-        self.title = title
-        self.font = font
-        self.titleTextColor = titleTextColor
-        self.transViewBackgroundColor = transViewBackgroundColor
-        self.radius = radius
-        self.animationOption = animationOption
+    public typealias BuilderClosure = (HSProgress) -> ()
+    
+    public init(closure:BuilderClosure) {
+        closure(self)
     }
+    
 }

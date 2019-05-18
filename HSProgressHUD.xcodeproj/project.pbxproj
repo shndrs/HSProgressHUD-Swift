@@ -13,9 +13,9 @@
 		F433BD332289766300281381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD312289766300281381 /* LaunchScreen.storyboard */; };
 		F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
 		F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA8B228BF9990055B590 /* HSProgress Model.swift */; };
-		F43DEA92228C07AD0055B590 /* TypeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA91228C07AD0055B590 /* TypeOne.swift */; };
-		F43DEA94228C07B90055B590 /* TypeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA93228C07B90055B590 /* TypeTwo.swift */; };
-		F43DEA96228C07C40055B590 /* TypeThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA95228C07C40055B590 /* TypeThree.swift */; };
+		F43DEA92228C07AD0055B590 /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA91228C07AD0055B590 /* HeartBeat.swift */; };
+		F43DEA94228C07B90055B590 /* XRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA93228C07B90055B590 /* XRotation.swift */; };
+		F43DEA96228C07C40055B590 /* LineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA95228C07C40055B590 /* LineLayer.swift */; };
 		F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA98228C08340055B590 /* HSBaseView.swift */; };
 		F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9B228C08950055B590 /* HSFactory.swift */; };
 		F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9E228C0C510055B590 /* Interfaces.swift */; };
@@ -33,9 +33,9 @@
 		F433BD342289766300281381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43DEA88228BD34B0055B590 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F43DEA8B228BF9990055B590 /* HSProgress Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HSProgress Model.swift"; sourceTree = "<group>"; };
-		F43DEA91228C07AD0055B590 /* TypeOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOne.swift; sourceTree = "<group>"; };
-		F43DEA93228C07B90055B590 /* TypeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTwo.swift; sourceTree = "<group>"; };
-		F43DEA95228C07C40055B590 /* TypeThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeThree.swift; sourceTree = "<group>"; };
+		F43DEA91228C07AD0055B590 /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
+		F43DEA93228C07B90055B590 /* XRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRotation.swift; sourceTree = "<group>"; };
+		F43DEA95228C07C40055B590 /* LineLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLayer.swift; sourceTree = "<group>"; };
 		F43DEA98228C08340055B590 /* HSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBaseView.swift; sourceTree = "<group>"; };
 		F43DEA9B228C08950055B590 /* HSFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSFactory.swift; sourceTree = "<group>"; };
 		F43DEA9E228C0C510055B590 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
@@ -103,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				F43DEAA0228C1D950055B590 /* TypeFour.swift */,
-				F43DEA95228C07C40055B590 /* TypeThree.swift */,
-				F43DEA93228C07B90055B590 /* TypeTwo.swift */,
-				F43DEA91228C07AD0055B590 /* TypeOne.swift */,
+				F43DEA95228C07C40055B590 /* LineLayer.swift */,
+				F43DEA93228C07B90055B590 /* XRotation.swift */,
+				F43DEA91228C07AD0055B590 /* HeartBeat.swift */,
 			);
 			path = "Pregresses Type";
 			sourceTree = "<group>";
@@ -217,11 +217,11 @@
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
 				F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */,
 				F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */,
-				F43DEA96228C07C40055B590 /* TypeThree.swift in Sources */,
-				F43DEA92228C07AD0055B590 /* TypeOne.swift in Sources */,
+				F43DEA96228C07C40055B590 /* LineLayer.swift in Sources */,
+				F43DEA92228C07AD0055B590 /* HeartBeat.swift in Sources */,
 				F43DEAA1228C1D950055B590 /* TypeFour.swift in Sources */,
 				F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */,
-				F43DEA94228C07B90055B590 /* TypeTwo.swift in Sources */,
+				F43DEA94228C07B90055B590 /* XRotation.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
 				F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */,
 				F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */,
