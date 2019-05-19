@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */; };
 		F433BD292289766200281381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD282289766200281381 /* AppDelegate.swift */; };
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
@@ -24,7 +25,20 @@
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F421DFC622911D1D00E1DBAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F433BD1D2289766200281381 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F433BD242289766200281381;
+			remoteInfo = HSProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F421DFC122911D1D00E1DBAF /* HSProgressHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSProgressHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSProgressHUDUITests.swift; sourceTree = "<group>"; };
+		F421DFC522911D1D00E1DBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F433BD252289766200281381 /* HSProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F433BD282289766200281381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F433BD2D2289766200281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F421DFBE22911D1D00E1DBAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F433BD222289766200281381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F421DFC222911D1D00E1DBAF /* HSProgressHUDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */,
+				F421DFC522911D1D00E1DBAF /* Info.plist */,
+			);
+			path = HSProgressHUDUITests;
+			sourceTree = "<group>";
+		};
 		F433BD1C2289766200281381 = {
 			isa = PBXGroup;
 			children = (
 				F433BD272289766200281381 /* HSProgressHUD */,
+				F421DFC222911D1D00E1DBAF /* HSProgressHUDUITests */,
 				F433BD262289766200281381 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F433BD252289766200281381 /* HSProgressHUD.app */,
+				F421DFC122911D1D00E1DBAF /* HSProgressHUDUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +177,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F421DFC022911D1D00E1DBAF /* HSProgressHUDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F421DFCA22911D1D00E1DBAF /* Build configuration list for PBXNativeTarget "HSProgressHUDUITests" */;
+			buildPhases = (
+				F421DFBD22911D1D00E1DBAF /* Sources */,
+				F421DFBE22911D1D00E1DBAF /* Frameworks */,
+				F421DFBF22911D1D00E1DBAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F421DFC722911D1D00E1DBAF /* PBXTargetDependency */,
+			);
+			name = HSProgressHUDUITests;
+			productName = HSProgressHUDUITests;
+			productReference = F421DFC122911D1D00E1DBAF /* HSProgressHUDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F433BD242289766200281381 /* HSProgressHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F433BD372289766300281381 /* Build configuration list for PBXNativeTarget "HSProgressHUD" */;
@@ -172,6 +222,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = shndrs;
 				TargetAttributes = {
+					F421DFC022911D1D00E1DBAF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F433BD242289766200281381;
+					};
 					F433BD242289766200281381 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -191,11 +245,19 @@
 			projectRoot = "";
 			targets = (
 				F433BD242289766200281381 /* HSProgressHUD */,
+				F421DFC022911D1D00E1DBAF /* HSProgressHUDUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F421DFBF22911D1D00E1DBAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F433BD232289766200281381 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +271,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F421DFBD22911D1D00E1DBAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F433BD212289766200281381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +300,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F421DFC722911D1D00E1DBAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F433BD242289766200281381 /* HSProgressHUD */;
+			targetProxy = F421DFC622911D1D00E1DBAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F433BD2C2289766200281381 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -250,6 +328,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F421DFC822911D1D00E1DBAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
+				INFOPLIST_FILE = HSProgressHUDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shndrs.HSProgressHUDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSProgressHUD;
+			};
+			name = Debug;
+		};
+		F421DFC922911D1D00E1DBAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRGCDU34JU;
+				INFOPLIST_FILE = HSProgressHUDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shndrs.HSProgressHUDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSProgressHUD;
+			};
+			name = Release;
+		};
 		F433BD352289766300281381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,6 +521,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F421DFCA22911D1D00E1DBAF /* Build configuration list for PBXNativeTarget "HSProgressHUDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F421DFC822911D1D00E1DBAF /* Debug */,
+				F421DFC922911D1D00E1DBAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F433BD202289766200281381 /* Build configuration list for PBXProject "HSProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
