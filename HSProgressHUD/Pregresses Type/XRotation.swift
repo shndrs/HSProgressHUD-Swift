@@ -55,36 +55,10 @@ extension XRotation: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
-        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        
-        rotationXAnimation.fromValue = 0
-        rotationXAnimation.toValue = CGFloat.pi * 2
-        rotationXAnimation.duration = 4
-        rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        rotationXAnimation.autoreverses = true
-        rotationXAnimation.repeatCount = .infinity
-        
-        transformAnimationInnerPulsate.toValue = 1.1
-        transformAnimationInnerPulsate.duration = 0.8
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .infinity
-        
-        opacityAnimation.fromValue = 1
-        opacityAnimation.toValue = 0.5
-        opacityAnimation.duration = 0.4
-        opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
-        opacityAnimation.autoreverses = true
-        opacityAnimation.repeatCount = .infinity
-        
-        transformScaleAnimation.toValue = 1.05
-        transformScaleAnimation.duration = 1.0
-        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformScaleAnimation.autoreverses = true
-        transformScaleAnimation.repeatCount = .infinity
+        let rotationXAnimation = HSAnimations.rotationX(duration: 4)
+        let transformAnimationInnerPulsate = HSAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
+        let opacityAnimation = HSAnimations.opacity()
+        let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
         
         mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
