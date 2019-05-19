@@ -14,11 +14,13 @@ public enum ShapeLayerType {
 
 open class HSBaseView: UIView {
     
-    private var progress: HSProgress
-    public lazy var mainShapeLayer = CAShapeLayer()
-    public lazy var mainPulsateShapeLayer = CAShapeLayer()
-    public lazy var secondPulsateShapeLayer = CAShapeLayer()
-    public lazy var titleLabel: UILabel = {
+    private var progress: HSProgressOptions
+    public private(set) lazy var mainShapeLayer = CAShapeLayer()
+    public private(set) lazy var mainPulsateShapeLayer = CAShapeLayer()
+    public private(set) lazy var secondPulsateShapeLayer = CAShapeLayer()
+    
+    /// the title label
+    public private(set) lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = progress.title
         lbl.textAlignment = .center
@@ -28,14 +30,15 @@ open class HSBaseView: UIView {
         return lbl
     }()
     
-    public lazy var transView: UIView = {
+    /// the transparent view in the background
+    public private(set) lazy var transView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         view.isUserInteractionEnabled = false
         view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.60)
         return view
     }()
     
-    public init(progress:HSProgress) {
+    public init(progress:HSProgressOptions) {
         self.progress = progress
         super.init(frame: .zero)
     }
@@ -44,6 +47,7 @@ open class HSBaseView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// this method set the circles position, path, fillColor and.........
     public func layerGenerator(shapeLayer: CAShapeLayer, type: ShapeLayerType) {
         
         switch type {

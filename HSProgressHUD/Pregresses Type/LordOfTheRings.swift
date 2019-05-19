@@ -1,5 +1,5 @@
 //
-//  LordOfTheRing.swift
+//  LordOfTheRings.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/15/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final public class LordOfTheRing: HSBaseView {}
+final public class LordOfTheRings: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension LordOfTheRing: HSProgressProtocol {
+extension LordOfTheRings: HSProgressProtocol {
     
     public func show() {
         transView.alpha = 0
@@ -43,7 +43,7 @@ extension LordOfTheRing: HSProgressProtocol {
 
 // MARK: Set Animation And Layers
 
-extension LordOfTheRing: HSProgressAnimation {
+extension LordOfTheRings: HSProgressAnimation {
     
     public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)

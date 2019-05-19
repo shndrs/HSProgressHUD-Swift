@@ -10,9 +10,9 @@ import Foundation
 
 public struct HSProgressHUD {
     
-    ///A Factory method That returns a HSProgressProtocol to access show and dismiss functions
+    ///A Factory method That returns a HSProgressProtocol to access show() and dismiss() functions
     
-    public static func set(progress:HSProgress) -> HSProgressProtocol {
+    public static func set(progress:HSProgressOptions) -> HSProgressProtocol {
         
         switch progress.animationOption {
             
@@ -30,7 +30,7 @@ public struct HSProgressHUD {
             
         case .lordOfTheRings:
             
-            return LordOfTheRing(progress: progress)
+            return LordOfTheRings(progress: progress)
             
         }
     }

@@ -1,5 +1,5 @@
 //
-//  HSProgress Model.swift
+//  HSProgressOptions Model.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/15/19.
@@ -9,10 +9,11 @@
 import UIKit
 
 public enum HSAnimationOptions {
+    /// diffrent types of animations
     case heartBeat, xRotation, lineLayer, lordOfTheRings
 }
 
-@requires_stored_property_inits public class HSProgress {
+@requires_stored_property_inits public class HSProgressOptions {
     
     /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1))
     public var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
@@ -45,7 +46,7 @@ public enum HSAnimationOptions {
     public var animationOption: HSAnimationOptions = .heartBeat
     
     
-    public typealias BuilderClosure = (HSProgress) -> ()
+    public typealias BuilderClosure = (HSProgressOptions) -> ()
     
     /// use this initializer for default setup
     public required init() {}

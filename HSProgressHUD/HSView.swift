@@ -30,7 +30,7 @@ public class HSView: UIView {
                                                       startAngle: -(.pi) / 2, endAngle:2 * .pi,
                                                       clockwise: true)
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = pleaseWait
         lbl.textAlignment = .center

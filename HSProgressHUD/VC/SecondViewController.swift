@@ -16,8 +16,8 @@ final class SecondViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let progress = HSProgress { (options) in
-            
+        let progress = HSProgressOptions { (options) in
+
             options.radius = 100
             options.mainPulsateColor = .brown
             options.strokeWidth = 17
@@ -27,10 +27,10 @@ final class SecondViewController: UIViewController {
             options.animationOption = HSAnimationOptions.lordOfTheRings
             options.font = UIFont(name: "Papyrus", size: 18)!
         }
-    
+
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             hud.dismiss(completion: nil)
         }

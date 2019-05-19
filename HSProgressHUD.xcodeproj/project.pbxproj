@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */; };
+		F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFCC22912BFB00E1DBAF /* CustomColors.swift */; };
 		F433BD292289766200281381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD282289766200281381 /* AppDelegate.swift */; };
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA98228C08340055B590 /* HSBaseView.swift */; };
 		F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9B228C08950055B590 /* HSFactory.swift */; };
 		F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9E228C0C510055B590 /* Interfaces.swift */; };
-		F43DEAA1228C1D950055B590 /* LordOfTheRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */; };
+		F43DEAA1228C1D950055B590 /* LordOfTheRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		F421DFC122911D1D00E1DBAF /* HSProgressHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSProgressHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSProgressHUDUITests.swift; sourceTree = "<group>"; };
 		F421DFC522911D1D00E1DBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F421DFCC22912BFB00E1DBAF /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		F433BD252289766200281381 /* HSProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F433BD282289766200281381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F433BD2D2289766200281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		F43DEA98228C08340055B590 /* HSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBaseView.swift; sourceTree = "<group>"; };
 		F43DEA9B228C08950055B590 /* HSFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSFactory.swift; sourceTree = "<group>"; };
 		F43DEA9E228C0C510055B590 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
-		F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRing.swift; sourceTree = "<group>"; };
+		F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRings.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,16 @@
 			path = HSProgressHUDUITests;
 			sourceTree = "<group>";
 		};
+		F421DFCB22912BD300E1DBAF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F421DFCC22912BFB00E1DBAF /* CustomColors.swift */,
+				F433BD2F2289766300281381 /* Assets.xcassets */,
+				F433BD282289766200281381 /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		F433BD1C2289766200281381 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		F433BD272289766200281381 /* HSProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				F421DFCB22912BD300E1DBAF /* Other */,
 				F4BE6A5F228C2DA40044F3A2 /* VC */,
 				F43DEA9D228C0C3D0055B590 /* Interfaces */,
 				F43DEA9A228C086A0055B590 /* Factory */,
@@ -113,9 +126,7 @@
 				F43DEA8D228C07430055B590 /* Pregresses Type */,
 				F43DEA8A228BF97E0055B590 /* HSProgress Model */,
 				F433BD2C2289766200281381 /* Main.storyboard */,
-				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD312289766300281381 /* LaunchScreen.storyboard */,
-				F433BD282289766200281381 /* AppDelegate.swift */,
 				F433BD342289766300281381 /* Info.plist */,
 				F4488CBD228AC8D800D61AF0 /* HSView.swift */,
 				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
@@ -134,7 +145,7 @@
 		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
 			isa = PBXGroup;
 			children = (
-				F43DEAA0228C1D950055B590 /* LordOfTheRing.swift */,
+				F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */,
 				F43DEA95228C07C40055B590 /* LineLayer.swift */,
 				F43DEA93228C07B90055B590 /* XRotation.swift */,
 				F43DEA91228C07AD0055B590 /* HeartBeat.swift */,
@@ -284,12 +295,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
+				F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */,
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
 				F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */,
 				F43DEA99228C08340055B590 /* HSBaseView.swift in Sources */,
 				F43DEA96228C07C40055B590 /* LineLayer.swift in Sources */,
 				F43DEA92228C07AD0055B590 /* HeartBeat.swift in Sources */,
-				F43DEAA1228C1D950055B590 /* LordOfTheRing.swift in Sources */,
+				F43DEAA1228C1D950055B590 /* LordOfTheRings.swift in Sources */,
 				F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */,
 				F43DEA94228C07B90055B590 /* XRotation.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
