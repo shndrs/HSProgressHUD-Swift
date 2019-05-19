@@ -60,46 +60,14 @@ extension LineLayer: HSProgressAnimation {
         
         mainShapeLayer.lineWidth = 5.0
         
-        let lineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
-        let transformAnimation = CABasicAnimation(keyPath: "lineWidth")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "lineWidth")
-        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let transformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
-        
-        lineWidthAnimation.toValue = 20.0
-        lineWidthAnimation.duration = 1.5
-        lineWidthAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        lineWidthAnimation.autoreverses = true
-        lineWidthAnimation.repeatCount = .greatestFiniteMagnitude
-        
-        transformAnimation.toValue = 20.0
-        transformAnimation.duration = 1
-        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformAnimation.autoreverses = true
-        transformAnimation.repeatCount = .greatestFiniteMagnitude
-        
-        transformAnimationInnerPulsate.toValue = 15.0
-        transformAnimationInnerPulsate.duration = 2
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .greatestFiniteMagnitude
-        
-        transformXScaleAnimation.toValue = 10.0
-        transformXScaleAnimation.duration = 2.5
-        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformXScaleAnimation.autoreverses = true
-        transformXScaleAnimation.repeatCount = .greatestFiniteMagnitude
-        
-        opacityAnimation.fromValue = 1
-        opacityAnimation.toValue = 0.5
-        opacityAnimation.duration = 0.4
-        opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
-        opacityAnimation.autoreverses = true
-        opacityAnimation.repeatCount = .infinity
+        let lineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 1.5)
+        let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 1)
+        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 2)
+        let opacityAnimation = HSAnimations.opacity()
 
         mainPulsateShapeLayer.add(opacityAnimation, forKey: "mainPulsateOpacity")
-        mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsRotationKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
+        mainPulsateShapeLayer.add(secondLineWidthAnimation, forKey: "shndrsRotationKey")
+        secondPulsateShapeLayer.add(thirdLineWidthAnimation, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
         mainShapeLayer.add(lineWidthAnimation, forKey: "lineWidthAnimation")
     }
