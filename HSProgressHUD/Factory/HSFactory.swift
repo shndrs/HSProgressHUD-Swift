@@ -32,6 +32,8 @@ public struct HSProgressHUD {
             
             return LordOfTheRings(progress: progress)
             
+        case .rotation:
+            return YRotation(progress:progress)
         }
     }
 }
