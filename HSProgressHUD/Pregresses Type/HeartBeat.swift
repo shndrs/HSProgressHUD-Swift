@@ -12,7 +12,7 @@ final public class HeartBeat: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension HeartBeat: HSProgressProtocol {
+extension HeartBeat: HSProgress {
     
     public func show() {
         transView.alpha = 0

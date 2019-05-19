@@ -12,7 +12,7 @@ final public class LordOfTheRings: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension LordOfTheRings: HSProgressProtocol {
+extension LordOfTheRings: HSProgress {
     
     public func show() {
         transView.alpha = 0

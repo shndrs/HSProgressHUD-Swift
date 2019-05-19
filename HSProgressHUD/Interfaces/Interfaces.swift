@@ -13,7 +13,7 @@ public protocol HSProgressAnimation {
     func setLayers() -> Void
 }
 
-public protocol HSProgressProtocol {
+public protocol HSProgress {
     func show() -> Void
     func dismiss(completion: (()->Void)?) -> Void
 }

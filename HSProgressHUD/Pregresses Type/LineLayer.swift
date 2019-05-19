@@ -12,7 +12,7 @@ final public class LineLayer: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension LineLayer: HSProgressProtocol {
+extension LineLayer: HSProgress {
     
     public func show() {
         transView.alpha = 0

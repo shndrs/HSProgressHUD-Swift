@@ -12,7 +12,7 @@ final public class XRotation: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension XRotation: HSProgressProtocol {
+extension XRotation: HSProgress {
     
     public func show() {
         transView.alpha = 0
