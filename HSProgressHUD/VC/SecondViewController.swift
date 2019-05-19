@@ -24,7 +24,7 @@ final class SecondViewController: UIViewController {
             options.secondPulsateColor = .gray
             options.strokeColor = .darkGray
             options.title = "shndrs and hnk presents"
-            options.animationOption = HSAnimationOptions.xRotation
+            options.animationOption = HSAnimationOptions.heartBeat
             options.font = UIFont(name: "Papyrus", size: 18)!
         }
 

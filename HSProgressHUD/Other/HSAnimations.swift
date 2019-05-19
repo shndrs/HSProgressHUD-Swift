@@ -37,6 +37,20 @@ public class HSAnimations {
         return transformScaleAnimation
     }
     
+    public static func transformX() -> CABasicAnimation {
+        
+        let transformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
+        
+        transformXScaleAnimation.fromValue = 1
+        transformXScaleAnimation.toValue = 1.02
+        transformXScaleAnimation.duration = 1.0
+        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformXScaleAnimation.autoreverses = true
+        transformXScaleAnimation.repeatCount = .infinity
+        
+        return transformXScaleAnimation
+    }
+    
     public static func rotationX(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
