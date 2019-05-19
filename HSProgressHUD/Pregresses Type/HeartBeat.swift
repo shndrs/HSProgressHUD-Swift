@@ -15,6 +15,7 @@ final public class HeartBeat: HSBaseView {}
 extension HeartBeat: HSProgress {
     
     public func show() {
+        
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -57,7 +58,7 @@ extension HeartBeat: HSProgressAnimation {
         let transformAnimation = CABasicAnimation(keyPath: "transform.scale")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
+        let transformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
         
         transformAnimation.toValue = 1.09
         transformAnimation.duration = 0.8
@@ -78,16 +79,16 @@ extension HeartBeat: HSProgressAnimation {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        tarnsformXScaleAnimation.fromValue = 1
-        tarnsformXScaleAnimation.toValue = 1.02
-        tarnsformXScaleAnimation.duration = 1.0
-        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformXScaleAnimation.autoreverses = true
-        tarnsformXScaleAnimation.repeatCount = .infinity
+        transformXScaleAnimation.fromValue = 1
+        transformXScaleAnimation.toValue = 1.02
+        transformXScaleAnimation.duration = 1.0
+        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformXScaleAnimation.autoreverses = true
+        transformXScaleAnimation.repeatCount = .infinity
         
         mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsTransformKey")
         secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        titleLabel.layer.add(tarnsformXScaleAnimation, forKey: "shndrsXTransKey")
+        titleLabel.layer.add(transformXScaleAnimation, forKey: "shndrsXTransKey")
     }
 }

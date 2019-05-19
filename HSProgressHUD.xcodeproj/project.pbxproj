@@ -10,6 +10,7 @@
 		F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFC322911D1D00E1DBAF /* HSProgressHUDUITests.swift */; };
 		F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFCC22912BFB00E1DBAF /* CustomColors.swift */; };
 		F421DFD4229148CB00E1DBAF /* XYRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFD3229148CB00E1DBAF /* XYRotation.swift */; };
+		F421DFD62291657500E1DBAF /* CABasicAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421DFD52291657500E1DBAF /* CABasicAnimationGenerator.swift */; };
 		F433BD292289766200281381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433BD282289766200281381 /* AppDelegate.swift */; };
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		F421DFC522911D1D00E1DBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F421DFCC22912BFB00E1DBAF /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		F421DFD3229148CB00E1DBAF /* XYRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYRotation.swift; sourceTree = "<group>"; };
+		F421DFD52291657500E1DBAF /* CABasicAnimationGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CABasicAnimationGenerator.swift; sourceTree = "<group>"; };
 		F433BD252289766200281381 /* HSProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F433BD282289766200281381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F433BD2D2289766200281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				F421DFCC22912BFB00E1DBAF /* CustomColors.swift */,
 				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD282289766200281381 /* AppDelegate.swift */,
+				F421DFD52291657500E1DBAF /* CABasicAnimationGenerator.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F421DFD62291657500E1DBAF /* CABasicAnimationGenerator.swift in Sources */,
 				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
 				F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */,
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,

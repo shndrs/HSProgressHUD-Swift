@@ -15,6 +15,7 @@ final public class XYRotation: HSBaseView {}
 extension XYRotation: HSProgress {
     
     public func show() {
+        
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center

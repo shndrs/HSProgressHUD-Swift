@@ -15,6 +15,7 @@ final public class LineLayer: HSBaseView {}
 extension LineLayer: HSProgress {
     
     public func show() {
+        
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -63,7 +64,7 @@ extension LineLayer: HSProgressAnimation {
         let transformAnimation = CABasicAnimation(keyPath: "lineWidth")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "lineWidth")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let tarnsformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
+        let transformXScaleAnimation = CABasicAnimation(keyPath: "lineWidth")
         
         lineWidthAnimation.toValue = 20.0
         lineWidthAnimation.duration = 1.5
@@ -83,11 +84,11 @@ extension LineLayer: HSProgressAnimation {
         transformAnimationInnerPulsate.autoreverses = true
         transformAnimationInnerPulsate.repeatCount = .greatestFiniteMagnitude
         
-        tarnsformXScaleAnimation.toValue = 10.0
-        tarnsformXScaleAnimation.duration = 2.5
-        tarnsformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformXScaleAnimation.autoreverses = true
-        tarnsformXScaleAnimation.repeatCount = .greatestFiniteMagnitude
+        transformXScaleAnimation.toValue = 10.0
+        transformXScaleAnimation.duration = 2.5
+        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformXScaleAnimation.autoreverses = true
+        transformXScaleAnimation.repeatCount = .greatestFiniteMagnitude
         
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5

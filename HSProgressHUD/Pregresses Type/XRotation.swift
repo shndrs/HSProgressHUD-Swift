@@ -15,6 +15,7 @@ final public class XRotation: HSBaseView {}
 extension XRotation: HSProgress {
     
     public func show() {
+        
         transView.alpha = 0
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
         titleLabel.center = transView.center
@@ -57,7 +58,7 @@ extension XRotation: HSProgressAnimation {
         let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
         let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         
         rotationXAnimation.fromValue = 0
         rotationXAnimation.toValue = CGFloat.pi * 2
@@ -79,16 +80,16 @@ extension XRotation: HSProgressAnimation {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        tarnsformScaleAnimation.toValue = 1.05
-        tarnsformScaleAnimation.duration = 1.0
-        tarnsformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformScaleAnimation.autoreverses = true
-        tarnsformScaleAnimation.repeatCount = .infinity
+        transformScaleAnimation.toValue = 1.05
+        transformScaleAnimation.duration = 1.0
+        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformScaleAnimation.autoreverses = true
+        transformScaleAnimation.repeatCount = .infinity
         
-        mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
+        mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
         secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        titleLabel.layer.add(tarnsformScaleAnimation, forKey: "shndrsXTransKey")
+        titleLabel.layer.add(transformScaleAnimation, forKey: "shndrsXTransKey")
     }
 }
