@@ -1,5 +1,5 @@
 //
-//  YRotation.swift
+//  XYRotation.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/19/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final public class YRotation: HSBaseView {}
+final public class XYRotation: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension YRotation: HSProgressProtocol {
+extension XYRotation: HSProgressProtocol {
     
     public func show() {
         transView.alpha = 0
@@ -43,7 +43,7 @@ extension YRotation: HSProgressProtocol {
 
 // MARK: Set Animation And Layers
 
-extension YRotation: HSProgressAnimation {
+extension XYRotation: HSProgressAnimation {
     
     public func setLayers() {
         layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
@@ -55,23 +55,12 @@ extension YRotation: HSProgressAnimation {
     public func setAnimation() {
         
         let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.rotation.y")
+        let rotationYAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         
-        rotationXAnimation.fromValue = 0
-        rotationXAnimation.toValue = CGFloat.pi * 2
-        rotationXAnimation.duration = 4
-        rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        rotationXAnimation.autoreverses = true
-        rotationXAnimation.repeatCount = .infinity
-        
-        transformAnimationInnerPulsate.fromValue = 0
-        transformAnimationInnerPulsate.toValue = CGFloat.pi * 2
-        transformAnimationInnerPulsate.duration = 2
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .infinity
+        let a = setAnimationProperties(animation: rotationXAnimation, duration: 4)
+        let b = setAnimationProperties(animation: rotationYAnimation, duration: 2)
         
         tarnsformScaleAnimation.toValue = 1.05
         tarnsformScaleAnimation.duration = 1.0
@@ -87,10 +76,9 @@ extension YRotation: HSProgressAnimation {
         opacityAnimation.repeatCount = .infinity
         
         mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
-        mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
+        mainPulsateShapeLayer.add(a, forKey: "shndrsRotationXKey")
+        secondPulsateShapeLayer.add(b, forKey: "shndrsRotationYKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-//        titleLabel.layer.add(tarnsformScaleAnimation, forKey: "shndrsXTransKey")
     }
     
     private func setAnimationProperties(animation:CABasicAnimation, duration: CFTimeInterval) -> CABasicAnimation {

@@ -10,7 +10,7 @@ import UIKit
 
 public enum HSAnimationOptions {
     /// diffrent types of animations
-    case heartBeat, xRotation, lineLayer, lordOfTheRings, rotation
+    case heartBeat, xRotation, lineLayer, lordOfTheRings, xyRotation
 }
 
 @requires_stored_property_inits public class HSProgressOptions {
