@@ -55,37 +55,11 @@ extension LordOfTheRings: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let mainPulsateAnimation = CABasicAnimation(keyPath: "transform.scale")
-        let transformAnimationInnerPulsate = CABasicAnimation(keyPath: "transform.scale")
-        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        
-        transformAnimationInnerPulsate.toValue = 1.1
-        transformAnimationInnerPulsate.duration = 0.8
-        transformAnimationInnerPulsate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        transformAnimationInnerPulsate.autoreverses = true
-        transformAnimationInnerPulsate.repeatCount = .infinity
-        
-        opacityAnimation.fromValue = 1
-        opacityAnimation.toValue = 0.5
-        opacityAnimation.duration = 0.4
-        opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
-        opacityAnimation.autoreverses = true
-        opacityAnimation.repeatCount = .infinity
-        
-        transformScaleAnimation.toValue = 1.05
-        transformScaleAnimation.duration = 1.0
-        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformScaleAnimation.autoreverses = true
-        transformScaleAnimation.repeatCount = .infinity
-        
-        mainPulsateAnimation.toValue = 0.9
-        mainPulsateAnimation.fromValue = 1.14
-        mainPulsateAnimation.duration = 2
-        mainPulsateAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        mainPulsateAnimation.autoreverses = true
-        mainPulsateAnimation.repeatCount = .infinity
-        
+        let transformAnimationInnerPulsate = HSAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
+        let mainPulsateAnimation = HSAnimations.transform(fromValue: 1.14, toValue: 0.9, duration: 2, option: .easeInEaseOut)
+        let opacityAnimation = HSAnimations.opacity()
+        let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
+
         mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         mainPulsateShapeLayer.add(mainPulsateAnimation, forKey: "shndrsMainPulsateKey")
         secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")

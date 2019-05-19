@@ -1,5 +1,5 @@
 //
-//  CABasicAnimationGenerator.swift
+//  HSAnimations.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 5/19/19.
@@ -8,15 +8,29 @@
 
 import UIKit
 
-public class CABasicAnimationGenerator {
+public class HSAnimations {
     
-    public static func transformAnimation(toValue: Any, duration: CFTimeInterval) -> CABasicAnimation {
+    public static func transform(toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         
-        transformScaleAnimation.toValue = 1.05
-        transformScaleAnimation.duration = 1.0
-        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformScaleAnimation.toValue = toValue
+        transformScaleAnimation.duration = duration
+        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
+        transformScaleAnimation.autoreverses = true
+        transformScaleAnimation.repeatCount = .infinity
+        
+        return transformScaleAnimation
+    }
+    
+    public static func transform(fromValue:Any, toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
+        
+        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        
+        transformScaleAnimation.fromValue = fromValue
+        transformScaleAnimation.toValue = toValue
+        transformScaleAnimation.duration = duration
+        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
         transformScaleAnimation.autoreverses = true
         transformScaleAnimation.repeatCount = .infinity
         
@@ -65,3 +79,4 @@ public class CABasicAnimationGenerator {
         return opacityAnimation
     }
 }
+
