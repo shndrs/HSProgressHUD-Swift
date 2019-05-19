@@ -94,5 +94,18 @@ public class HSAnimations {
         
         return opacityAnimation
     }
+    
+    public static func lineWidth(toValue: Any, duration: CFTimeInterval) -> CABasicAnimation {
+        
+        let lineWidthAnimation = CABasicAnimation(keyPath: "lineWidth")
+        
+        lineWidthAnimation.toValue = toValue
+        lineWidthAnimation.duration = duration
+        lineWidthAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        lineWidthAnimation.autoreverses = true
+        lineWidthAnimation.repeatCount = .greatestFiniteMagnitude
+        
+        return lineWidthAnimation
+    }
 }
 

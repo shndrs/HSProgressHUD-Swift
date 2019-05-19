@@ -63,9 +63,9 @@ extension XYRotation: HSProgressAnimation {
         
         mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        mainPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "sr")
+        mainPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "scaleDownKey")
         secondPulsateShapeLayer.add(rotationYAnimation, forKey: "shndrsRotationYKey")
-        secondPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "rs")
+        secondPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "secondScaleDownKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
     }
 }
