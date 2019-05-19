@@ -56,14 +56,21 @@ extension XYRotation: HSProgressAnimation {
         
         let rotationXAnimationx = setAnimationProperties(animation: CABasicAnimation(keyPath: "transform.rotation.x"), duration: 4)
         let rotationYAnimationy = setAnimationProperties(animation: CABasicAnimation(keyPath: "transform.rotation.y"), duration: 2)
-        let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let secondTransformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         
-        tarnsformScaleAnimation.toValue = 1.05
-        tarnsformScaleAnimation.duration = 1.0
-        tarnsformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        tarnsformScaleAnimation.autoreverses = true
-        tarnsformScaleAnimation.repeatCount = .infinity
+        transformScaleAnimation.toValue = 1.05
+        transformScaleAnimation.duration = 1.0
+        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformScaleAnimation.autoreverses = true
+        transformScaleAnimation.repeatCount = .infinity
+        
+        secondTransformScaleAnimation.toValue = 0.7
+        secondTransformScaleAnimation.duration = 2.0
+        secondTransformScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        secondTransformScaleAnimation.autoreverses = true
+        secondTransformScaleAnimation.repeatCount = .infinity
         
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5
@@ -72,9 +79,11 @@ extension XYRotation: HSProgressAnimation {
         opacityAnimation.autoreverses = true
         opacityAnimation.repeatCount = .infinity
         
-        mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
+        mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         mainPulsateShapeLayer.add(rotationXAnimationx, forKey: "shndrsRotationXKey")
+        mainPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "sr")
         secondPulsateShapeLayer.add(rotationYAnimationy, forKey: "shndrsRotationYKey")
+        secondPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "rs")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
     }
     
