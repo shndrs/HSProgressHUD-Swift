@@ -10,6 +10,8 @@ import UIKit
 
 public class HSAnimations {
     
+    private init() {}
+    
     public static func transform(toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
