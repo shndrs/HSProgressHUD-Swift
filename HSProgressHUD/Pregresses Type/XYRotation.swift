@@ -54,13 +54,10 @@ extension XYRotation: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-        let rotationYAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
+        let rotationXAnimationx = setAnimationProperties(animation: CABasicAnimation(keyPath: "transform.rotation.x"), duration: 4)
+        let rotationYAnimationy = setAnimationProperties(animation: CABasicAnimation(keyPath: "transform.rotation.y"), duration: 2)
         let tarnsformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        
-        let a = setAnimationProperties(animation: rotationXAnimation, duration: 4)
-        let b = setAnimationProperties(animation: rotationYAnimation, duration: 2)
         
         tarnsformScaleAnimation.toValue = 1.05
         tarnsformScaleAnimation.duration = 1.0
@@ -76,8 +73,8 @@ extension XYRotation: HSProgressAnimation {
         opacityAnimation.repeatCount = .infinity
         
         mainShapeLayer.add(tarnsformScaleAnimation, forKey: "shndrsScaleTransform")
-        mainPulsateShapeLayer.add(a, forKey: "shndrsRotationXKey")
-        secondPulsateShapeLayer.add(b, forKey: "shndrsRotationYKey")
+        mainPulsateShapeLayer.add(rotationXAnimationx, forKey: "shndrsRotationXKey")
+        secondPulsateShapeLayer.add(rotationYAnimationy, forKey: "shndrsRotationYKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
     }
     
