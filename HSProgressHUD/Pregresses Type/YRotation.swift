@@ -1,18 +1,18 @@
 //
-//  XYRotation.swift
+//  YRotation.swift
 //  HSProgressHUD
 //
-//  Created by NP2 on 5/19/19.
+//  Created by NP2 on 5/20/19.
 //  Copyright © 2019 shndrs. All rights reserved.
 //
 
 import UIKit
 
-final public class XYRotation: HSBaseView {}
+final public class YRotation: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension XYRotation: HSProgress {
+extension YRotation: HSProgress {
     
     public func show() {
         
@@ -44,7 +44,7 @@ extension XYRotation: HSProgress {
 
 // MARK: Set Animation And Layers
 
-extension XYRotation: HSProgressAnimation {
+extension YRotation: HSProgressAnimation {
     
     public func setLayers() {
         layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
@@ -55,17 +55,16 @@ extension XYRotation: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = HSAnimations.rotationX(duration: 4)
-        let rotationYAnimation = HSAnimations.rotationY(duration: 2)
-        let transformScaleAnimation = HSAnimations.transform(toValue: 0.94, duration: 1.0, option: .easeInEaseOut)
-        let secondTransformScaleAnimation = HSAnimations.transform(toValue: 0.7, duration: 2.0, option: .easeInEaseOut)
+        let rotationXAnimation = HSAnimations.rotationY(duration: 4)
+        let transformAnimationInnerPulsate = HSAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
         let opacityAnimation = HSAnimations.opacity()
+        let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
         
         firstShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         secondShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        secondShapeLayer.add(secondTransformScaleAnimation, forKey: "scaleDownKey")
-        thirdShapeLayer.add(rotationYAnimation, forKey: "shndrsRotationYKey")
-        thirdShapeLayer.add(secondTransformScaleAnimation, forKey: "secondScaleDownKey")
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
+        titleLabel.layer.add(transformScaleAnimation, forKey: "shndrsXTransKey")
     }
 }
+

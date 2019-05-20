@@ -35,6 +35,10 @@ public struct HSProgressHUD {
         case .xyRotation:
             
             return XYRotation(progress:progress)
+            
+        case .yRotation:
+            
+            return YRotation(progress:progress)
         }
     }
 }

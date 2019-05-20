@@ -24,14 +24,14 @@ final class SecondViewController: UIViewController {
             options.secondPulsateColor = .gray
             options.strokeColor = .darkGray
             options.title = "shndrs and hnk presents"
-            options.animationOption = HSAnimationOptions.lordOfTheRings
+            options.animationOption = HSAnimationOptions.yRotation
             options.font = UIFont(name: "Papyrus", size: 18)!
         }
 
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.dismiss(completion: nil)
         }
     }
