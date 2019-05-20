@@ -47,9 +47,9 @@ extension XYRotation: HSProgress {
 extension XYRotation: HSProgressAnimation {
     
     public func setLayers() {
-        layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
-        layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
-        layerGenerator(shapeLayer: mainShapeLayer, type: .track)
+        layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
+        layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
+        layerGenerator(shapeLayer: firstShapeLayer, type: .track)
         setAnimation()
     }
     
@@ -61,11 +61,11 @@ extension XYRotation: HSProgressAnimation {
         let secondTransformScaleAnimation = HSAnimations.transform(toValue: 0.7, duration: 2.0, option: .easeInEaseOut)
         let opacityAnimation = HSAnimations.opacity()
         
-        mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
-        mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        mainPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "scaleDownKey")
-        secondPulsateShapeLayer.add(rotationYAnimation, forKey: "shndrsRotationYKey")
-        secondPulsateShapeLayer.add(secondTransformScaleAnimation, forKey: "secondScaleDownKey")
+        firstShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
+        secondShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
+        secondShapeLayer.add(secondTransformScaleAnimation, forKey: "scaleDownKey")
+        thirdShapeLayer.add(rotationYAnimation, forKey: "shndrsRotationYKey")
+        thirdShapeLayer.add(secondTransformScaleAnimation, forKey: "secondScaleDownKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
     }
 }

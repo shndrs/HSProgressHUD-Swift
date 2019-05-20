@@ -50,25 +50,25 @@ extension LineLayer: HSProgress {
 extension LineLayer: HSProgressAnimation {
     
     public func setLayers() {
-        layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
-        layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
-        layerGenerator(shapeLayer: mainShapeLayer, type: .track)
+        layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
+        layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
+        layerGenerator(shapeLayer: firstShapeLayer, type: .track)
         setAnimation()
     }
     
     public func setAnimation() {
         
-        mainShapeLayer.lineWidth = 5.0
+        firstShapeLayer.lineWidth = 5.0
         
         let lineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 1.5)
         let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 1)
         let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 2)
         let opacityAnimation = HSAnimations.opacity()
 
-        mainPulsateShapeLayer.add(opacityAnimation, forKey: "mainPulsateOpacity")
-        mainPulsateShapeLayer.add(secondLineWidthAnimation, forKey: "shndrsRotationKey")
-        secondPulsateShapeLayer.add(thirdLineWidthAnimation, forKey: "shndrsInnerTransformKey")
+        secondShapeLayer.add(opacityAnimation, forKey: "mainPulsateOpacity")
+        secondShapeLayer.add(secondLineWidthAnimation, forKey: "shndrsRotationKey")
+        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        mainShapeLayer.add(lineWidthAnimation, forKey: "lineWidthAnimation")
+        firstShapeLayer.add(lineWidthAnimation, forKey: "lineWidthAnimation")
     }
 }

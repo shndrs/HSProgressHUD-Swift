@@ -15,9 +15,12 @@ public enum ShapeLayerType {
 open class HSBaseView: UIView {
     
     private var progress: HSProgressOptions
-    public private(set) lazy var mainShapeLayer = CAShapeLayer()
-    public private(set) lazy var mainPulsateShapeLayer = CAShapeLayer()
-    public private(set) lazy var secondPulsateShapeLayer = CAShapeLayer()
+    /// our first shape layer
+    public private(set) lazy var firstShapeLayer = CAShapeLayer()
+    /// our second shape layer
+    public private(set) lazy var secondShapeLayer = CAShapeLayer()
+    /// our third shape layer
+    public private(set) lazy var thirdShapeLayer = CAShapeLayer()
     
     /// the title label
     public private(set) lazy var titleLabel: UILabel = {
@@ -37,8 +40,8 @@ open class HSBaseView: UIView {
         view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.60)
         return view
     }()
-    
-    public init(progress:HSProgressOptions) {
+    /// HSBaseView initializer that take a HSProgressOptions as it input
+    public init(progress: HSProgressOptions) {
         self.progress = progress
         super.init(frame: .zero)
     }

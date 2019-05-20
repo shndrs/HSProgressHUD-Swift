@@ -47,9 +47,9 @@ extension HeartBeat: HSProgress {
 extension HeartBeat: HSProgressAnimation {
     
     public func setLayers() {
-        layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
-        layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
-        layerGenerator(shapeLayer: mainShapeLayer, type: .track)
+        layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
+        layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
+        layerGenerator(shapeLayer: firstShapeLayer, type: .track)
         setAnimation()
     }
     
@@ -60,8 +60,8 @@ extension HeartBeat: HSProgressAnimation {
         let opacityAnimation = HSAnimations.opacity()
         let transformXScaleAnimation = HSAnimations.transformX()
 
-        mainPulsateShapeLayer.add(transformAnimation, forKey: "shndrsTransformKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
+        secondShapeLayer.add(transformAnimation, forKey: "shndrsTransformKey")
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
         titleLabel.layer.add(transformXScaleAnimation, forKey: "shndrsXTransKey")
     }

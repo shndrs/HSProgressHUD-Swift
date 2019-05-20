@@ -94,4 +94,3 @@ public class HSAnimations {
         return lineWidthAnimation
     }
 }
-

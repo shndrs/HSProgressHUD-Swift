@@ -47,9 +47,9 @@ extension XRotation: HSProgress {
 extension XRotation: HSProgressAnimation {
     
     public func setLayers() {
-        layerGenerator(shapeLayer: mainPulsateShapeLayer, type: .pulsate)
-        layerGenerator(shapeLayer: secondPulsateShapeLayer, type: .innerPulsate)
-        layerGenerator(shapeLayer: mainShapeLayer, type: .track)
+        layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
+        layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
+        layerGenerator(shapeLayer: firstShapeLayer, type: .track)
         setAnimation()
     }
     
@@ -60,9 +60,9 @@ extension XRotation: HSProgressAnimation {
         let opacityAnimation = HSAnimations.opacity()
         let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
         
-        mainShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
-        mainPulsateShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        secondPulsateShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
+        firstShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
+        secondShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
         titleLabel.layer.add(transformScaleAnimation, forKey: "shndrsXTransKey")
     }
