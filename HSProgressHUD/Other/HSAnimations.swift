@@ -12,7 +12,7 @@ public class HSAnimations {
     
     private init() {}
     
-    public static func transform(toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
+    public static func transform(fromValue:Any = 1, toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         
@@ -24,21 +24,7 @@ public class HSAnimations {
         
         return transformScaleAnimation
     }
-    
-    public static func transform(fromValue:Any, toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
-        
-        let transformScaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        
-        transformScaleAnimation.fromValue = fromValue
-        transformScaleAnimation.toValue = toValue
-        transformScaleAnimation.duration = duration
-        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
-        transformScaleAnimation.autoreverses = true
-        transformScaleAnimation.repeatCount = .infinity
-        
-        return transformScaleAnimation
-    }
-    
+
     public static func transformX() -> CABasicAnimation {
         
         let transformXScaleAnimation = CABasicAnimation(keyPath: "transform.scale.x")
