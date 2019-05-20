@@ -55,17 +55,14 @@ extension XYRotation: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = HSAnimations.rotationX(duration: 4)
-        let rotationYAnimation = HSAnimations.rotationY(duration: 2)
-        let transformScaleAnimation = HSAnimations.transform(toValue: 0.94, duration: 1.0, option: .easeInEaseOut)
-        let secondTransformScaleAnimation = HSAnimations.transform(toValue: 0.7, duration: 2.0, option: .easeInEaseOut)
+        let rotationXAnimation = HSAnimations.rotationX(duration: 6)
+        let rotationYAnimation = HSAnimations.rotationY(duration: 3)
+        let transformScaleAnimation = HSAnimations.transform(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
         let opacityAnimation = HSAnimations.opacity()
         
         firstShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
         secondShapeLayer.add(rotationXAnimation, forKey: "shndrsRotationXKey")
-        secondShapeLayer.add(secondTransformScaleAnimation, forKey: "scaleDownKey")
         thirdShapeLayer.add(rotationYAnimation, forKey: "shndrsRotationYKey")
-        thirdShapeLayer.add(secondTransformScaleAnimation, forKey: "secondScaleDownKey")
         titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
     }
 }

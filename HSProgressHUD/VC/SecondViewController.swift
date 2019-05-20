@@ -23,8 +23,8 @@ final class SecondViewController: UIViewController {
             options.strokeWidth = 17
             options.secondPulsateColor = .gray
             options.strokeColor = .darkGray
-            options.title = "shndrs and hnk presents"
-            options.animationOption = HSAnimationOptions.yRotation
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.xyRotation
             options.font = UIFont(name: "Papyrus", size: 18)!
         }
 
