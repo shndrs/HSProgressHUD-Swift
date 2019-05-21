@@ -100,6 +100,7 @@
 				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD282289766200281381 /* AppDelegate.swift */,
 				F421DFD92291732400E1DBAF /* HSAnimations.swift */,
+				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -136,7 +137,6 @@
 				F433BD312289766300281381 /* LaunchScreen.storyboard */,
 				F433BD342289766300281381 /* Info.plist */,
 				F4488CBD228AC8D800D61AF0 /* HSView.swift */,
-				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
 			);
 			path = HSProgressHUD;
 			sourceTree = "<group>";

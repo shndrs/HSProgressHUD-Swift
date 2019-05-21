@@ -25,7 +25,6 @@ final class SecondViewController: UIViewController {
             options.strokeColor = .darkGray
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.xyRotation
-            options.font = UIFont(name: "Papyrus", size: 18)!
         }
 
         let hud = HSProgressHUD.set(progress: progress)

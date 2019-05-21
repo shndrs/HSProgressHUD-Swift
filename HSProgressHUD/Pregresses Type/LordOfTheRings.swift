@@ -60,10 +60,10 @@ extension LordOfTheRings: HSProgressAnimation {
         let opacityAnimation = HSAnimations.opacity()
         let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
 
-        firstShapeLayer.add(transformScaleAnimation, forKey: "shndrsScaleTransform")
-        secondShapeLayer.add(mainPulsateAnimation, forKey: "shndrsMainPulsateKey")
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: "shndrsInnerTransformScaleKey")
-        titleLabel.layer.add(opacityAnimation, forKey: "shndrsOpacityKey")
-        titleLabel.layer.add(transformScaleAnimation, forKey: "shndrsXTransKey")
+        firstShapeLayer.add(transformScaleAnimation, forKey: HSHUDStrings.hsKey0.rawValue)
+        secondShapeLayer.add(mainPulsateAnimation, forKey: HSHUDStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: HSHUDStrings.hsKey2.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: HSHUDStrings.hsKey3.rawValue)
+        titleLabel.layer.add(transformScaleAnimation, forKey: HSHUDStrings.hsKey4.rawValue)
     }
 }
