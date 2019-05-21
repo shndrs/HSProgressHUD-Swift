@@ -65,10 +65,10 @@ extension LineLayer: HSProgressAnimation {
         let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 2)
         let opacityAnimation = HSAnimations.opacity()
 
-        secondShapeLayer.add(opacityAnimation, forKey: HSHUDStrings.hsKey0.rawValue)
-        secondShapeLayer.add(secondLineWidthAnimation, forKey: HSHUDStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSHUDStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: HSHUDStrings.hsKey3.rawValue)
-        firstShapeLayer.add(lineWidthAnimation, forKey: HSHUDStrings.hsKey4.rawValue)
+        secondShapeLayer.add(opacityAnimation, forKey: HSStrings.hsKey0.rawValue)
+        secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
+        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
     }
 }

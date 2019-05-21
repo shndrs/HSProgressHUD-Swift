@@ -60,9 +60,9 @@ extension XYRotation: HSProgressAnimation {
         let transformScaleAnimation = HSAnimations.transform(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
         let opacityAnimation = HSAnimations.opacity()
         
-        firstShapeLayer.add(transformScaleAnimation, forKey: HSHUDStrings.hsKey0.rawValue)
-        secondShapeLayer.add(rotationXAnimation, forKey: HSHUDStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(rotationYAnimation, forKey: HSHUDStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: HSHUDStrings.hsKey3.rawValue)
+        firstShapeLayer.add(transformScaleAnimation, forKey: HSStrings.hsKey0.rawValue)
+        secondShapeLayer.add(rotationXAnimation, forKey: HSStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(rotationYAnimation, forKey: HSStrings.hsKey2.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
     }
 }

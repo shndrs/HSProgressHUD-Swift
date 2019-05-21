@@ -26,7 +26,7 @@
 		F43DEAA1228C1D950055B590 /* LordOfTheRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */; };
 		F4456D7E2292B35700469597 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4456D7D2292B35700469597 /* YRotation.swift */; };
 		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
-		F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */; };
+		F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRings.swift; sourceTree = "<group>"; };
 		F4456D7D2292B35700469597 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
 		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
-		F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDStrings.swift; sourceTree = "<group>"; };
+		F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 				F433BD2F2289766300281381 /* Assets.xcassets */,
 				F433BD282289766200281381 /* AppDelegate.swift */,
 				F421DFD92291732400E1DBAF /* HSAnimations.swift */,
-				F4488CBF228ADE5E00D61AF0 /* HSHUDStrings.swift */,
+				F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 				F421DFDA2291732400E1DBAF /* HSAnimations.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
 				F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */,
-				F4488CC0228ADE5E00D61AF0 /* HSHUDStrings.swift in Sources */,
+				F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

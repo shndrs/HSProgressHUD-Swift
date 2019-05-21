@@ -60,9 +60,9 @@ extension HeartBeat: HSProgressAnimation {
         let opacityAnimation = HSAnimations.opacity()
         let transformXScaleAnimation = HSAnimations.transformX()
 
-        secondShapeLayer.add(transformAnimation, forKey: HSHUDStrings.hsKey0.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: HSHUDStrings.hsKey1.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: HSHUDStrings.hsKey2.rawValue)
-        titleLabel.layer.add(transformXScaleAnimation, forKey: HSHUDStrings.hsKey3.rawValue)
+        secondShapeLayer.add(transformAnimation, forKey: HSStrings.hsKey0.rawValue)
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: HSStrings.hsKey1.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey2.rawValue)
+        titleLabel.layer.add(transformXScaleAnimation, forKey: HSStrings.hsKey3.rawValue)
     }
 }
