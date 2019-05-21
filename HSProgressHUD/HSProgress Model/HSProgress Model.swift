@@ -28,10 +28,10 @@ public enum HSAnimationOptions {
     public var secondPulsateColor: UIColor = UIColor.gray
     
     /// title text (by default is Please Wait...)
-    public var title: String = "Please Wait..."
+    public var title: String = HSHUDStrings.pleaseWait.rawValue
     
     /// font of title text (by default is Papyrus size 18) AKA Papyrus is not Lame ;-) :D
-    public var font: UIFont = UIFont(name: "Papyrus", size: 18)!
+    public var font: UIFont = UIFont(name: HSHUDStrings.fontName.rawValue, size: 18)!
     
     /// color of title text (by default is white)
     public var titleTextColor: UIColor = .white

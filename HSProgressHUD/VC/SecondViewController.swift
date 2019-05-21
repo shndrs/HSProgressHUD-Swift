@@ -24,7 +24,7 @@ final class SecondViewController: UIViewController {
             options.secondPulsateColor = .gray
             options.strokeColor = .darkGray
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.xyRotation
+            options.animationOption = HSAnimationOptions.heartBeat
         }
 
         let hud = HSProgressHUD.set(progress: progress)

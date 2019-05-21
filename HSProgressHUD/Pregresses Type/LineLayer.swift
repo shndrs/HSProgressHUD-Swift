@@ -16,10 +16,6 @@ extension LineLayer: HSProgress {
     
     public func show() {
         
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
         setLayers()
         UIApplication.shared.keyWindow?.addSubview(transView)
         
@@ -50,6 +46,10 @@ extension LineLayer: HSProgress {
 extension LineLayer: HSProgressAnimation {
     
     public func setLayers() {
+        transView.alpha = 0
+        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
+        titleLabel.center = transView.center
+        transView.addSubview(titleLabel)
         layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
         layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
         layerGenerator(shapeLayer: firstShapeLayer, type: .track)

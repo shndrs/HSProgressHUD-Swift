@@ -11,6 +11,12 @@ import Foundation
 public enum HSHUDStrings:String {
     case pleaseWait = "Please Wait...";
     case fontName = "Papyrus";
+    case transformScale = "transform.scale"
+    case transformScaleX = "transform.scale.x"
+    case transformRotationX = "transform.rotation.x"
+    case transformRotationY = "transform.rotation.y"
+    case opacity
+    case lineWidth
     case hsKey0
     case hsKey1
     case hsKey2
