@@ -2,8 +2,8 @@
 //  CustomColors.swift
 //  BranchEditor
 //
-//  Created by NP2 on 4/6/19.
-//  Copyright © 2019 Ansar IT. All rights reserved.
+//  Created by NP2 on 5/19/19.
+//  Copyright © 2019 shndrs. All rights reserved.
 //
 
 import UIKit

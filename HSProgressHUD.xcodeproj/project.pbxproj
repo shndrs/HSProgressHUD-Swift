@@ -152,12 +152,12 @@
 		F43DEA8D228C07430055B590 /* Pregresses Type */ = {
 			isa = PBXGroup;
 			children = (
-				F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */,
-				F43DEA95228C07C40055B590 /* LineLayer.swift */,
-				F43DEA93228C07B90055B590 /* XRotation.swift */,
-				F4456D7D2292B35700469597 /* YRotation.swift */,
 				F43DEA91228C07AD0055B590 /* HeartBeat.swift */,
+				F43DEA95228C07C40055B590 /* LineLayer.swift */,
+				F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */,
+				F43DEA93228C07B90055B590 /* XRotation.swift */,
 				F421DFD3229148CB00E1DBAF /* XYRotation.swift */,
+				F4456D7D2292B35700469597 /* YRotation.swift */,
 			);
 			path = "Pregresses Type";
 			sourceTree = "<group>";
