@@ -10,14 +10,9 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let progress = HSProgressOptions { (options) in
-
             options.radius = 100
             options.mainPulsateColor = .brown
             options.strokeWidth = 17
@@ -29,7 +24,7 @@ final class SecondViewController: UIViewController {
 
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.dismiss(completion: nil)
         }
