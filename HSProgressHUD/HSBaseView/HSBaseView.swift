@@ -16,11 +16,20 @@ open class HSBaseView: UIView {
     
     private var progress: HSProgressOptions
     /// our first shape layer
-    public private(set) lazy var firstShapeLayer = CAShapeLayer()
+    public private(set) lazy var firstShapeLayer: CAShapeLayer = {
+        let temp = CAShapeLayer()
+        return temp
+    }()
     /// our second shape layer
-    public private(set) lazy var secondShapeLayer = CAShapeLayer()
+    public private(set) lazy var secondShapeLayer: CAShapeLayer = {
+        let temp = CAShapeLayer()
+        return temp
+    }()
     /// our third shape layer
-    public private(set) lazy var thirdShapeLayer = CAShapeLayer()
+    public private(set) lazy var thirdShapeLayer: CAShapeLayer = {
+        let temp = CAShapeLayer()
+        return temp
+    }()
     
     /// the title label
     public private(set) lazy var titleLabel: UILabel = {
