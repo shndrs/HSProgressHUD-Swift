@@ -19,12 +19,12 @@ final class SecondViewController: UIViewController {
             options.secondPulsateColor = .gray
             options.strokeColor = .darkGray
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.heartBeat
+            options.animationOption = HSAnimationOptions.lordOfTheRings
         }
 
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.dismiss(completion: nil)
         }

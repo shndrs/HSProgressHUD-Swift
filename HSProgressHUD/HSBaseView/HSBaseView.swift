@@ -15,6 +15,7 @@ public enum ShapeLayerType {
 open class HSBaseView: UIView {
     
     private var progress: HSProgressOptions
+    
     /// our first shape layer
     public private(set) lazy var firstShapeLayer: CAShapeLayer = {
         let temp = CAShapeLayer()
@@ -64,12 +65,12 @@ open class HSBaseView: UIView {
         
         switch type {
             
-        case .track:
-            shapeLayer.strokeColor = progress.strokeColor.cgColor
-        case .pulsate:
-            shapeLayer.strokeColor = progress.mainPulsateColor.withAlphaComponent(0.34).cgColor
-        case .innerPulsate:
-            shapeLayer.strokeColor = progress.secondPulsateColor.cgColor
+            case .track:
+                shapeLayer.strokeColor = progress.strokeColor.cgColor
+            case .pulsate:
+                shapeLayer.strokeColor = progress.mainPulsateColor.withAlphaComponent(0.34).cgColor
+            case .innerPulsate:
+                shapeLayer.strokeColor = progress.secondPulsateColor.cgColor
         }
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
