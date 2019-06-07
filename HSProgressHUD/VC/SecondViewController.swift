@@ -21,7 +21,7 @@ final class SecondViewController: UIViewController {
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.lordOfTheRings
         }
-
+        
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
 

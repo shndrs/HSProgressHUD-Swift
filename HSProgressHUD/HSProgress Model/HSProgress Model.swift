@@ -57,7 +57,7 @@ public enum HSAnimationOptions {
     public required init() {}
     
     /// Customize HSProgressHUD by using this closure
-    public init(closure:BuilderClosure) {
-        closure(self)
+    public init(options:BuilderClosure) {
+        options(self)
     }
 }
