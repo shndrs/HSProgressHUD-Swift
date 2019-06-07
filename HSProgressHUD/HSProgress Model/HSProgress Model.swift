@@ -20,17 +20,17 @@ public enum HSAnimationOptions {
 
 @requires_stored_property_inits public class HSProgressOptions {
     
-    /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
-    public var strokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
-    
     /// the width of stroke (by default is 17.0)
     public var strokeWidth: CGFloat = 17.0
     
+    /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
+    public var firstLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    
     /// the color of mian pulsate layer that is transparent all the time (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
-    public var mainPulsateColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    public var secondLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
     /// the color of inner pulsate layer (by default is .gray)
-    public var secondPulsateColor: UIColor = UIColor.gray
+    public var thirdLayerStrokeColor: UIColor = UIColor.gray
     
     /// title text (by default is Please Wait...)
     public var title: String = HSStrings.pleaseWait.rawValue

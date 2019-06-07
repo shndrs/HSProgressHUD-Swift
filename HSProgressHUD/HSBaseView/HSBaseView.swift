@@ -66,11 +66,11 @@ open class HSBaseView: UIView {
         switch type {
             
             case .track:
-                shapeLayer.strokeColor = progress.strokeColor.cgColor
+                shapeLayer.strokeColor = progress.firstLayerStrokeColor.cgColor
             case .pulsate:
-                shapeLayer.strokeColor = progress.mainPulsateColor.withAlphaComponent(0.34).cgColor
+                shapeLayer.strokeColor = progress.secondLayerStrokeColor.withAlphaComponent(0.34).cgColor
             case .innerPulsate:
-                shapeLayer.strokeColor = progress.secondPulsateColor.cgColor
+                shapeLayer.strokeColor = progress.thirdLayerStrokeColor.cgColor
         }
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
