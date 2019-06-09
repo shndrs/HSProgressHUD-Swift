@@ -14,17 +14,17 @@ final class SecondViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.mainPulsateColor = .brown
+            options.secondLayerStrokeColor = .brown
             options.strokeWidth = 17
-            options.secondPulsateColor = .gray
-            options.strokeColor = .darkGray
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.lordOfTheRings
         }
-
+        
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.dismiss(completion: nil)
         }

@@ -25,7 +25,6 @@
 		F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA9E228C0C510055B590 /* Interfaces.swift */; };
 		F43DEAA1228C1D950055B590 /* LordOfTheRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */; };
 		F4456D7E2292B35700469597 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4456D7D2292B35700469597 /* YRotation.swift */; };
-		F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBD228AC8D800D61AF0 /* HSView.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		F43DEA9E228C0C510055B590 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
 		F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRings.swift; sourceTree = "<group>"; };
 		F4456D7D2292B35700469597 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
-		F4488CBD228AC8D800D61AF0 /* HSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSView.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +134,6 @@
 				F433BD2C2289766200281381 /* Main.storyboard */,
 				F433BD312289766300281381 /* LaunchScreen.storyboard */,
 				F433BD342289766300281381 /* Info.plist */,
-				F4488CBD228AC8D800D61AF0 /* HSView.swift */,
 			);
 			path = HSProgressHUD;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4488CBE228AC8D800D61AF0 /* HSView.swift in Sources */,
 				F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */,
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
 				F4456D7E2292B35700469597 /* YRotation.swift in Sources */,
