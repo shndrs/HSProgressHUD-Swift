@@ -19,8 +19,7 @@ public class HSAnimations {
         transformScaleAnimation.toValue = toValue
         transformScaleAnimation.duration = duration
         transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
-        transformScaleAnimation.autoreverses = true
-        transformScaleAnimation.repeatCount = .infinity
+        setCommonAnimationProperties(animation: transformScaleAnimation)
         
         return transformScaleAnimation
     }
@@ -33,8 +32,7 @@ public class HSAnimations {
         transformXScaleAnimation.toValue = 1.02
         transformXScaleAnimation.duration = 1.0
         transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transformXScaleAnimation.autoreverses = true
-        transformXScaleAnimation.repeatCount = .infinity
+        setCommonAnimationProperties(animation: transformXScaleAnimation)
         
         return transformXScaleAnimation
     }
@@ -47,8 +45,7 @@ public class HSAnimations {
         rotationXAnimation.toValue = CGFloat.pi * 2
         rotationXAnimation.duration = duration
         rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        rotationXAnimation.autoreverses = true
-        rotationXAnimation.repeatCount = .infinity
+        setCommonAnimationProperties(animation: rotationXAnimation)
         
         return rotationXAnimation
     }
@@ -61,8 +58,7 @@ public class HSAnimations {
         rotationXAnimation.toValue = CGFloat.pi * 2
         rotationXAnimation.duration = duration
         rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        rotationXAnimation.autoreverses = true
-        rotationXAnimation.repeatCount = .infinity
+        setCommonAnimationProperties(animation: rotationXAnimation)
         
         return rotationXAnimation
     }
@@ -75,8 +71,7 @@ public class HSAnimations {
         opacityAnimation.toValue = 0.5
         opacityAnimation.duration = 0.4
         opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        opacityAnimation.autoreverses = true
-        opacityAnimation.repeatCount = .infinity
+        setCommonAnimationProperties(animation: opacityAnimation)
         
         return opacityAnimation
     }
@@ -88,9 +83,17 @@ public class HSAnimations {
         lineWidthAnimation.toValue = toValue
         lineWidthAnimation.duration = duration
         lineWidthAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        lineWidthAnimation.autoreverses = true
-        lineWidthAnimation.repeatCount = .greatestFiniteMagnitude
+        setCommonAnimationProperties(animation: lineWidthAnimation)
         
         return lineWidthAnimation
+    }
+}
+
+// MARK: - Set common animation properties
+
+extension HSAnimations {
+    fileprivate class func setCommonAnimationProperties(animation: CABasicAnimation) {
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
     }
 }
