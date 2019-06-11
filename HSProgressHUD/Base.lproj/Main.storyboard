@@ -26,7 +26,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hq2-qa-Bb0">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5AW-Rs-mfk"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdO-ZF-lXK">
                                         <rect key="frame" x="0.0" y="62.000000000000028" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="p5q-9I-rns"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyU-X2-iKA">
                                         <rect key="frame" x="0.0" y="124.00000000000003" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1QI-o0-ux0"/>
                                         </constraints>
@@ -83,7 +83,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-mu-2No">
                                         <rect key="frame" x="0.0" y="186.00000000000003" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="LRq-Fq-lnZ"/>
                                         </constraints>
@@ -102,7 +102,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt0-6a-aPY">
                                         <rect key="frame" x="0.0" y="248" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="iHc-UX-1kZ"/>
                                         </constraints>
@@ -121,7 +121,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-p4-a2D">
                                         <rect key="frame" x="0.0" y="310" width="311" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.66836557149999998" blue="0.29990862759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="K9W-PK-YMh"/>
                                         </constraints>
@@ -134,6 +134,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="xyRotationButtonPressed:" destination="NWD-Ta-Dzn" eventType="touchUpInside" id="CnB-YU-whH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

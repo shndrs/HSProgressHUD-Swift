@@ -10,6 +10,8 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
+    // MARK: - Heart Beat Animation
+    
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
@@ -29,6 +31,8 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - LineLayer Animation
 
     @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
         
@@ -50,6 +54,8 @@ final class SecondViewController: UIViewController {
         }
     }
     
+    // MARK: - LordOfTheRings Animation
+    
     @IBAction private func lordOfTheRingsButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
@@ -70,6 +76,8 @@ final class SecondViewController: UIViewController {
         }
     }
     
+    // MARK: - XRotation Animation
+    
     @IBAction private func xRotationButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
@@ -89,6 +97,8 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - YRotation Animation
 
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
         
@@ -110,4 +120,25 @@ final class SecondViewController: UIViewController {
         }
     }
     
+    // MARK: - XYRotation Animation
+    
+    @IBAction private func xyRotationButtonPressed(_ sender: UIButton) {
+        
+        let progress = HSProgressOptions { (options) in
+            options.radius = 100
+            options.secondLayerStrokeColor = .brown
+            options.strokeWidth = 17
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = .darkGray
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.xyRotation
+        }
+        
+        let hud = HSProgressHUD.set(progress: progress)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
