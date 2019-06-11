@@ -77,6 +77,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="lordOfTheRingsButtonPressed:" destination="NWD-Ta-Dzn" eventType="touchUpInside" id="ag4-v4-aVo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-mu-2No">
                                         <rect key="frame" x="0.0" y="186.00000000000003" width="311" height="45"/>
