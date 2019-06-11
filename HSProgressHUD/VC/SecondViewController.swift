@@ -10,7 +10,7 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
-    @IBAction private func showButtonPressed(_ sender: UIButton) {
+    @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
@@ -19,7 +19,9 @@ final class SecondViewController: UIViewController {
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.lordOfTheRings
+            
+            
+            options.animationOption = HSAnimationOptions.heartBeat
         }
         
         let hud = HSProgressHUD.set(progress: progress)
