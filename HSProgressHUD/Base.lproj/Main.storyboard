@@ -96,6 +96,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="xRotationButtonPressed:" destination="NWD-Ta-Dzn" eventType="touchUpInside" id="tqJ-Po-pFS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt0-6a-aPY">
                                         <rect key="frame" x="0.0" y="248" width="311" height="45"/>
