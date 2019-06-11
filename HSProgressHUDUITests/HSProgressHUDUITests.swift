@@ -19,7 +19,14 @@ class HSProgressHUDUITests: XCTestCase {
 
     func testExample() {
         
-        let bg5Element = XCUIApplication().otherElements.containing(.image, identifier:"bg5").element
-        bg5Element.tap()
+        
+        let app = XCUIApplication()
+        app.buttons["Show Custom Indicator"].tap()
+        app.otherElements.containing(.image, identifier:"bg5").element.tap()
+
+        
+        
+        
+        
     }
 }

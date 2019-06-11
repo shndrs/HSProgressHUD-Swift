@@ -10,7 +10,7 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction private func showButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
@@ -24,9 +24,21 @@ final class SecondViewController: UIViewController {
         
         let hud = HSProgressHUD.set(progress: progress)
         hud.show()
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.dismiss(completion: nil)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
     }
 }
