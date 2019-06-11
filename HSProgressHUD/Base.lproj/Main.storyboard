@@ -58,6 +58,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="lineLayerButtonPressed:" destination="NWD-Ta-Dzn" eventType="touchUpInside" id="opS-p8-hDf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyU-X2-iKA">
                                         <rect key="frame" x="0.0" y="124.00000000000003" width="311" height="45"/>

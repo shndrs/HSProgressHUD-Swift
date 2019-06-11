@@ -19,8 +19,6 @@ final class SecondViewController: UIViewController {
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
-            
-            
             options.animationOption = HSAnimationOptions.heartBeat
         }
         
@@ -31,16 +29,27 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
         
+        let progress = HSProgressOptions { (options) in
+            options.radius = 100
+            options.secondLayerStrokeColor = .brown
+            options.strokeWidth = 17
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = .darkGray
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.lineLayer
+        }
         
+        let hud = HSProgressHUD.set(progress: progress)
+        hud.show()
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-    }
+    
+    
 }
