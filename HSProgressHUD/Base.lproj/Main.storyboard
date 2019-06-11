@@ -115,6 +115,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="yRotationButtonPressed:" destination="NWD-Ta-Dzn" eventType="touchUpInside" id="3TF-bt-o1r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-p4-a2D">
                                         <rect key="frame" x="0.0" y="310" width="311" height="45"/>

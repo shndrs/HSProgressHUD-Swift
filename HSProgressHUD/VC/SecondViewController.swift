@@ -79,7 +79,7 @@ final class SecondViewController: UIViewController {
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.lordOfTheRings
+            options.animationOption = HSAnimationOptions.xRotation
         }
         
         let hud = HSProgressHUD.set(progress: progress)
@@ -90,6 +90,24 @@ final class SecondViewController: UIViewController {
         }
     }
 
-    
+    @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
+        
+        let progress = HSProgressOptions { (options) in
+            options.radius = 100
+            options.secondLayerStrokeColor = .brown
+            options.strokeWidth = 17
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = .darkGray
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.yRotation
+        }
+        
+        let hud = HSProgressHUD.set(progress: progress)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
     
 }
