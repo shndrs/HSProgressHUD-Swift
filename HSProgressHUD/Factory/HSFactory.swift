@@ -14,6 +14,7 @@ public struct HSProgressHUD {
     
     ///A Factory method That returns a HSProgressProtocol to access show() and dismiss() functions
     
+    @discardableResult
     public static func set(progress:HSProgressOptions) -> HSProgress {
         
         switch progress.animationOption {

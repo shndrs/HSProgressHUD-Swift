@@ -12,6 +12,7 @@ public class HSAnimations {
     
     private init() {}
     
+    @discardableResult
     public static func transform(fromValue:Any = 1, toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: HSStrings.transformScale.rawValue)
@@ -24,6 +25,7 @@ public class HSAnimations {
         return transformScaleAnimation
     }
 
+    @discardableResult
     public static func transformX() -> CABasicAnimation {
         
         let transformXScaleAnimation = CABasicAnimation(keyPath: HSStrings.transformScaleX.rawValue)
@@ -37,6 +39,7 @@ public class HSAnimations {
         return transformXScaleAnimation
     }
     
+    @discardableResult
     public static func rotationX(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: HSStrings.transformRotationX.rawValue)
@@ -50,6 +53,7 @@ public class HSAnimations {
         return rotationXAnimation
     }
     
+    @discardableResult
     public static func rotationY(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: HSStrings.transformRotationY.rawValue)
@@ -63,6 +67,7 @@ public class HSAnimations {
         return rotationXAnimation
     }
     
+    @discardableResult
     public static func opacity() -> CABasicAnimation {
         
         let opacityAnimation = CABasicAnimation(keyPath: HSStrings.opacity.rawValue)
@@ -76,6 +81,7 @@ public class HSAnimations {
         return opacityAnimation
     }
     
+    @discardableResult
     public static func lineWidth(toValue: Any, duration: CFTimeInterval) -> CABasicAnimation {
         
         let lineWidthAnimation = CABasicAnimation(keyPath: HSStrings.lineWidth.rawValue)
