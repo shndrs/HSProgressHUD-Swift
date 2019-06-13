@@ -9,7 +9,7 @@
 import UIKit
 
 public enum ShapeLayerType {
-    case track, pulsate, innerPulsate
+    case firstShapeLayer, secondShapeLayer, thirdShapeLayer
 }
 
 open class HSBaseView: UIView {
@@ -65,11 +65,11 @@ open class HSBaseView: UIView {
         
         switch type {
             
-            case .track:
+            case .firstShapeLayer:
                 shapeLayer.strokeColor = progress.firstLayerStrokeColor.cgColor
-            case .pulsate:
+            case .secondShapeLayer:
                 shapeLayer.strokeColor = progress.secondLayerStrokeColor.withAlphaComponent(0.34).cgColor
-            case .innerPulsate:
+            case .thirdShapeLayer:
                 shapeLayer.strokeColor = progress.thirdLayerStrokeColor.cgColor
         }
         
