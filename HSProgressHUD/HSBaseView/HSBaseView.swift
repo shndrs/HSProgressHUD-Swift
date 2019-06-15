@@ -68,7 +68,7 @@ open class HSBaseView: UIView {
             case .firstShapeLayer:
                 shapeLayer.strokeColor = progress.firstLayerStrokeColor.cgColor
             case .secondShapeLayer:
-                shapeLayer.strokeColor = progress.secondLayerStrokeColor.withAlphaComponent(0.34).cgColor
+                shapeLayer.strokeColor = progress.secondLayerStrokeColor.withAlphaComponent(0.42).cgColor
             case .thirdShapeLayer:
                 shapeLayer.strokeColor = progress.thirdLayerStrokeColor.cgColor
         }
