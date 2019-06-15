@@ -47,9 +47,9 @@ extension LordOfTheRings: HSProgressAnimation {
         titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 110)
         titleLabel.center = transView.center
         transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .pulsate)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .innerPulsate)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .track)
+        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
+        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
+        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
         setAnimation()
     }
     
