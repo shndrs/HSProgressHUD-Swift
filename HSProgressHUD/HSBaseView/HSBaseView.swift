@@ -47,7 +47,7 @@ open class HSBaseView: UIView {
     public private(set) lazy var transView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         view.isUserInteractionEnabled = false
-        view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.70)
+        view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.90)
         return view
     }()
     /// HSBaseView initializer that take a HSProgressOptions as it input
