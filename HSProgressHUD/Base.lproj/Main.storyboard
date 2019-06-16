@@ -140,16 +140,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by shndrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2O-JU-sEA">
+                                <rect key="frame" x="8" y="96" width="359" height="124.66666666666669"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f2O-JU-sEA" firstAttribute="top" secondItem="g4Q-gt-jjQ" secondAttribute="top" constant="8" id="0B8-5y-Qgq"/>
                             <constraint firstItem="KWJ-OG-RJr" firstAttribute="leading" secondItem="g4Q-gt-jjQ" secondAttribute="leading" constant="32" id="3uz-Df-G9h"/>
                             <constraint firstItem="g4Q-gt-jjQ" firstAttribute="trailing" secondItem="KWJ-OG-RJr" secondAttribute="trailing" constant="32" id="9I5-x1-Lbu"/>
+                            <constraint firstItem="KWJ-OG-RJr" firstAttribute="top" secondItem="f2O-JU-sEA" secondAttribute="bottom" constant="8" id="F1m-cd-irW"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="trailing" secondItem="g4Q-gt-jjQ" secondAttribute="trailing" id="Two-tX-ud6"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="leading" secondItem="g4Q-gt-jjQ" secondAttribute="leading" id="cQm-qz-KYb"/>
                             <constraint firstAttribute="bottom" secondItem="r6A-BZ-Td9" secondAttribute="bottom" id="d2E-tB-s7l"/>
                             <constraint firstItem="r6A-BZ-Td9" firstAttribute="top" secondItem="6m6-T6-XlY" secondAttribute="top" id="eY4-kY-IWs"/>
+                            <constraint firstItem="f2O-JU-sEA" firstAttribute="leading" secondItem="g4Q-gt-jjQ" secondAttribute="leading" constant="8" id="kF6-KF-wPf"/>
                             <constraint firstItem="KWJ-OG-RJr" firstAttribute="centerY" secondItem="6m6-T6-XlY" secondAttribute="centerY" id="nTd-nj-06k"/>
+                            <constraint firstItem="g4Q-gt-jjQ" firstAttribute="trailing" secondItem="f2O-JU-sEA" secondAttribute="trailing" constant="8" id="q9L-Xa-eHh"/>
                             <constraint firstItem="KWJ-OG-RJr" firstAttribute="centerX" secondItem="6m6-T6-XlY" secondAttribute="centerX" id="unm-oG-Ii7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g4Q-gt-jjQ"/>

@@ -149,6 +149,6 @@ extension SecondViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = "HSProgressHUD"
-        navigationController?.navigationBar.barTintColor = .purple
+        navigationController?.navigationBar.barTintColor = .white
     }
 }

@@ -17,6 +17,7 @@ extension LineLayer: HSProgress {
     public func show() {
         
         setLayers()
+        UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
         UIApplication.shared.keyWindow?.addSubview(transView)
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
@@ -36,6 +37,7 @@ extension LineLayer: HSProgress {
         }) { (success) in
             
             self.transView.removeFromSuperview()
+            UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
             completion?()
         }
     }
