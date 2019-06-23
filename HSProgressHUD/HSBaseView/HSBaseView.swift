@@ -14,7 +14,7 @@ public enum ShapeLayerType {
 
 open class HSBaseView: UIView {
     
-    private var progress: HSProgressOptions
+    public var progress: HSProgressOptions
     
     /// our first shape layer
     public private(set) lazy var firstShapeLayer: CAShapeLayer = {

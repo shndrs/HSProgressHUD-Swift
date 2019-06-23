@@ -63,7 +63,7 @@ extension AntColony: HSProgressAnimation {
         
         let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 10.0, duration: 0.75, option: .linear, autoreverse: false)
         let scaleTransformAnimation = HSAnimations.transform(fromValue: 1.14, toValue: 0.93, duration: 2, option: .linear)
-        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 17.0, duration: 2)
+        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: (progress.strokeWidth - 3.5), duration: 2)
         let opacityAnimation = HSAnimations.opacity()
         let transformXAnimation = HSAnimations.transformX()
         
