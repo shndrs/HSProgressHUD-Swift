@@ -16,7 +16,8 @@ public enum HSAnimationOptions {
          lineLayer,
          lordOfTheRings,
          xyRotation,
-         antColony
+         antColony,
+         lineDashRotation
 }
 
 @requires_stored_property_inits public class HSProgressOptions {
