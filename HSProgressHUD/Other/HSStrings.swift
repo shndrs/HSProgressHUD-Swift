@@ -25,4 +25,9 @@ public enum HSStrings:String {
     case hsKey3
     case hsKey4
     case hsKey5
+    case hsKey6
+    case hsKey7
+    case hsKey8
+    case hsKey9
+    
 }

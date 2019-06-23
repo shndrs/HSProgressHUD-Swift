@@ -163,6 +163,26 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    @IBAction private func lineDashRotationButtonPressed(_ sender: UIButton) {
+        
+        let progress = HSProgressOptions { (options) in
+            options.radius = 130
+            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.strokeWidth = 5
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = CustomColors.niceBlue
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.lineDashRotation
+        }
+        
+        let hud = HSProgressHUD.set(progress: progress)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
 
 // MARK: - Life Cycle

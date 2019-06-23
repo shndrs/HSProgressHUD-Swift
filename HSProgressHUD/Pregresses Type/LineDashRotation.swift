@@ -58,13 +58,13 @@ extension LineDashRotation: HSProgressAnimation {
     
     public func setAnimation() {
         
-        firstShapeLayer.lineWidth = 5.0
+        firstShapeLayer.lineWidth = progress.strokeWidth
         firstShapeLayer.lineDashPattern = [5]
         
-        secondShapeLayer.lineWidth = 5.0
+        secondShapeLayer.lineWidth = progress.strokeWidth
         secondShapeLayer.lineDashPattern = [5]
         
-        thirdShapeLayer.lineWidth = 5.0
+        thirdShapeLayer.lineWidth = progress.strokeWidth
         thirdShapeLayer.lineDashPattern = [5]
         
         firstShapeLayer.strokeStart = 0.0
@@ -72,19 +72,22 @@ extension LineDashRotation: HSProgressAnimation {
         
         let rotationXAnimation = HSAnimations.rotationX(duration: 6)
         let rotationYAnimation = HSAnimations.rotationY(duration: 3)
-        let transformScaleAnimation = HSAnimations.transform(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
-        let opacityAnimation = HSAnimations.opacity()
-        let a = HSAnimations.lineDashPhase(byValue: 18.0, duration: 0.75)
-        let b = HSAnimations.strokeEndAnimation()
+        let transformScaleAnimation = HSAnimations.transform(toValue: 0.96, duration: 2.0, option: .easeInEaseOut)
+        let transformScaleAnimation2 = HSAnimations.transform(toValue: 1.0, duration: 1.0, option: .easeInEaseOut)
+        let transformScaleAnimation3 = HSAnimations.transform(fromValue: 1.04, toValue: 1.09, duration: 3, option: .easeInEaseOut)
         
-        firstShapeLayer.add(a, forKey: "lkj")
-        secondShapeLayer.add(a, forKey: "jkl")
-        thirdShapeLayer.add(a, forKey: "ljk")
-        firstShapeLayer.add(b, forKey: "jhg")
+        let opacityAnimation = HSAnimations.opacity()
+        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 18.0, duration: 0.75)
+        let strokeEndAnimation = HSAnimations.strokeEndAnimation(toValue: 1, duration: 0.4, option: .easeIn)
+        
         firstShapeLayer.add(transformScaleAnimation, forKey: HSStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationXAnimation, forKey: HSStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(rotationYAnimation, forKey: HSStrings.hsKey2.rawValue)
+        thirdShapeLayer.add(transformScaleAnimation3, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
+        secondShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey5.rawValue)
+        thirdShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey6.rawValue)
+        firstShapeLayer.add(strokeEndAnimation, forKey: HSStrings.hsKey7.rawValue)
     }
 }
 
