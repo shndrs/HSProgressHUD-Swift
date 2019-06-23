@@ -58,15 +58,28 @@ extension AntColony: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = HSAnimations.rotationY(duration: 4)
-        let transformAnimationInnerPulsate = HSAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
-        let opacityAnimation = HSAnimations.opacity()
-        let transformScaleAnimation = HSAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
+        firstShapeLayer.lineWidth = 5.0
+        firstShapeLayer.lineDashPattern = [5]
         
-        firstShapeLayer.add(transformScaleAnimation, forKey: HSStrings.hsKey0.rawValue)
-        secondShapeLayer.add(rotationXAnimation, forKey: HSStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: HSStrings.hsKey2.rawValue)
+//        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
+//        lineDashPhaseAnimation.byValue = 10.0
+//        lineDashPhaseAnimation.duration = 0.75
+//        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+//        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
+        
+        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 10.0, duration: 0.75, option: .linear)
+        
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
+        
+        let lineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 1.3)
+        let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 0.8)
+        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 2)
+        let opacityAnimation = HSAnimations.opacity()
+        
+        secondShapeLayer.add(opacityAnimation, forKey: HSStrings.hsKey0.rawValue)
+        secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
-        titleLabel.layer.add(transformScaleAnimation, forKey: HSStrings.hsKey4.rawValue)
+        //        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
     }
 }
