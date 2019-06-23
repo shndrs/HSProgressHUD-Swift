@@ -61,22 +61,16 @@ extension AntColony: HSProgressAnimation {
         firstShapeLayer.lineWidth = 5.0
         firstShapeLayer.lineDashPattern = [5]
         
-//        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
-//        lineDashPhaseAnimation.byValue = 10.0
-//        lineDashPhaseAnimation.duration = 0.75
-//        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-//        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
-        
         let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 10.0, duration: 0.75, option: .linear, autoreverse: false)
-        let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 0.8)
-        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 2)
+        let scaleTransformAnimation = HSAnimations.transform(fromValue: 1.14, toValue: 0.93, duration: 2, option: .linear)
+        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 17.0, duration: 2)
         let opacityAnimation = HSAnimations.opacity()
+        let transformXAnimation = HSAnimations.transformX()
         
-        secondShapeLayer.add(opacityAnimation, forKey: HSStrings.hsKey0.rawValue)
-        secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
+        secondShapeLayer.add(scaleTransformAnimation, forKey: HSStrings.hsKey1.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
+        titleLabel.layer.add(transformXAnimation, forKey: HSStrings.hsKey0.rawValue)
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
-        
     }
 }
