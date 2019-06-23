@@ -43,7 +43,7 @@ final class SecondViewController: UIViewController {
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.antColony
+            options.animationOption = HSAnimationOptions.lineLayer
         }
         
         let hud = HSProgressHUD.set(progress: progress)

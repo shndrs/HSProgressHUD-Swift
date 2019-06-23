@@ -60,34 +60,41 @@ extension LineLayer: HSProgressAnimation {
     
     public func setAnimation() {
         
-        firstShapeLayer.lineWidth = 5.0
-        
-        
-        
-        
-        
+        firstShapeLayer.lineWidth = (progress.strokeWidth / 4) + 1
         firstShapeLayer.lineDashPattern = [5]
         
-        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
-        lineDashPhaseAnimation.byValue = 10.0
-        lineDashPhaseAnimation.duration = 0.75
-        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
+        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 158.0, duration: 3.75, option: .easeInEaseOut, autoreverse: true)
         
-        firstShapeLayer.add(lineDashPhaseAnimation, forKey: "lineDashPhaseAnimation")
+        
+        
+        
+        
+        firstShapeLayer.strokeStart = 0.0
+        firstShapeLayer.strokeEnd = 0.0
+        
+        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeEndAnimation.toValue = 1.0
+        strokeEndAnimation.duration = 0.75
+        strokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        strokeEndAnimation.repeatCount = .greatestFiniteMagnitude
+        strokeEndAnimation.autoreverses = true
+        
+        firstShapeLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
         
 
         
         
-        let lineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 1.3)
-        let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 0.8)
-        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 2)
+        
+        
+        let lineWidthAnimation = HSAnimations.lineWidth(toValue: (progress.strokeWidth / 4) + 2.5, duration: 0.3)
+        let scaleTransformAnimation = HSAnimations.transform(fromValue: 1, toValue: 1.06, duration: 1.1, option: .easeIn)
+        let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: (progress.strokeWidth - 1.0), duration: 0.3)
         let opacityAnimation = HSAnimations.opacity()
 
-        secondShapeLayer.add(opacityAnimation, forKey: HSStrings.hsKey0.rawValue)
-        secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
-//        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
+        secondShapeLayer.add(scaleTransformAnimation, forKey: HSStrings.hsKey0.rawValue)
+        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey2.rawValue)
+        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey3.rawValue)
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
     }
 }
