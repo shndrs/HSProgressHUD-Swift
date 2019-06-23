@@ -83,7 +83,7 @@ final class SecondViewController: UIViewController {
         let progress = HSProgressOptions { (options) in
             options.radius = 100
             options.secondLayerStrokeColor = .brown
-            options.strokeWidth = 17
+            options.strokeWidth = 12
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
@@ -105,7 +105,7 @@ final class SecondViewController: UIViewController {
         let progress = HSProgressOptions { (options) in
             options.radius = 100
             options.secondLayerStrokeColor = .brown
-            options.strokeWidth = 17
+            options.strokeWidth = 12
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
             options.title = "shndrs presents"
