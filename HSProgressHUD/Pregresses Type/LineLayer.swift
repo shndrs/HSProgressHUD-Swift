@@ -62,39 +62,21 @@ extension LineLayer: HSProgressAnimation {
         
         firstShapeLayer.lineWidth = (progress.strokeWidth / 4) + 1
         firstShapeLayer.lineDashPattern = [5]
-        
-        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 158.0, duration: 3.75, option: .easeInEaseOut, autoreverse: true)
-        
-        
-        
-        
-        
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
         
-        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        strokeEndAnimation.toValue = 1.0
-        strokeEndAnimation.duration = 0.75
-        strokeEndAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        strokeEndAnimation.repeatCount = .greatestFiniteMagnitude
-        strokeEndAnimation.autoreverses = true
-        
-        firstShapeLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
-        
-
-        
-        
-        
-        
+        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 158.0, duration: 3.75, option: .easeInEaseOut, autoreverse: true)
         let lineWidthAnimation = HSAnimations.lineWidth(toValue: (progress.strokeWidth / 4) + 2.5, duration: 0.3)
         let scaleTransformAnimation = HSAnimations.transform(fromValue: 1, toValue: 1.06, duration: 1.1, option: .easeIn)
         let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: (progress.strokeWidth - 1.0), duration: 0.3)
         let opacityAnimation = HSAnimations.opacity()
+        let strokeEndAnimation = HSAnimations.strokeEndAnimation(duration: 2)
 
         secondShapeLayer.add(scaleTransformAnimation, forKey: HSStrings.hsKey0.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey2.rawValue)
         firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey3.rawValue)
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
+        firstShapeLayer.add(strokeEndAnimation, forKey: HSStrings.hsKey5.rawValue)
     }
 }
