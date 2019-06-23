@@ -109,7 +109,7 @@ public class HSAnimations {
     @discardableResult
     public static func strokeEndAnimation(toValue:Any = 1.0, duration:CFTimeInterval = 0.75, option:CAMediaTimingFunctionName = .easeInEaseOut) -> CABasicAnimation {
         
-        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        let strokeEndAnimation = CABasicAnimation(keyPath: HSStrings.strokeEnd.rawValue)
         strokeEndAnimation.toValue = 1.0
         strokeEndAnimation.duration = 0.75
         strokeEndAnimation.timingFunction = CAMediaTimingFunction(name: option)
