@@ -1,18 +1,18 @@
 //
-//  YRotation.swift
+//  AntColony.swift
 //  HSProgressHUD
 //
-//  Created by NP2 on 5/20/19.
+//  Created by NP2 on 6/23/19.
 //  Copyright © 2019 shndrs. All rights reserved.
 //
 
 import UIKit
 
-final public class YRotation: HSBaseView {}
+final public class AntColony: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension YRotation: HSProgress {
+extension AntColony: HSProgress {
     
     public func show() {
         
@@ -43,7 +43,7 @@ extension YRotation: HSProgress {
 
 // MARK: Set Animation And Layers
 
-extension YRotation: HSProgressAnimation {
+extension AntColony: HSProgressAnimation {
     
     public func setLayers() {
         transView.alpha = 0

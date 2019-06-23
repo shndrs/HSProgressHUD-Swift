@@ -93,6 +93,16 @@ public class HSAnimations {
         
         return lineWidthAnimation
     }
+    
+    @discardableResult
+    public static func lineDashPhase(byValue:Any , duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
+        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
+        lineDashPhaseAnimation.byValue = byValue
+        lineDashPhaseAnimation.duration = duration
+        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: option)
+        setCommonAnimationProperties(animation: lineDashPhaseAnimation)
+        return lineDashPhaseAnimation
+    }
 }
 
 // MARK: - Set common animation properties

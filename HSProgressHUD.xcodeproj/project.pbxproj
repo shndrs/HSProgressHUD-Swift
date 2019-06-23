@@ -26,6 +26,7 @@
 		F43DEAA1228C1D950055B590 /* LordOfTheRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */; };
 		F4456D7E2292B35700469597 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4456D7D2292B35700469597 /* YRotation.swift */; };
 		F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */; };
+		F44A2E6C22BF46B200F53B5C /* AntColony.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E6B22BF46B200F53B5C /* AntColony.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		F43DEAA0228C1D950055B590 /* LordOfTheRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRings.swift; sourceTree = "<group>"; };
 		F4456D7D2292B35700469597 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
 		F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStrings.swift; sourceTree = "<group>"; };
+		F44A2E6B22BF46B200F53B5C /* AntColony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntColony.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				F43DEA93228C07B90055B590 /* XRotation.swift */,
 				F421DFD3229148CB00E1DBAF /* XYRotation.swift */,
 				F4456D7D2292B35700469597 /* YRotation.swift */,
+				F44A2E6B22BF46B200F53B5C /* AntColony.swift */,
 			);
 			path = "Pregresses Type";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F421DFCD22912BFB00E1DBAF /* CustomColors.swift in Sources */,
+				F44A2E6C22BF46B200F53B5C /* AntColony.swift in Sources */,
 				F43DEA9C228C08950055B590 /* HSFactory.swift in Sources */,
 				F4456D7E2292B35700469597 /* YRotation.swift in Sources */,
 				F43DEA9F228C0C510055B590 /* Interfaces.swift in Sources */,

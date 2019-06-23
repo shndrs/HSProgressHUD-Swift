@@ -62,6 +62,23 @@ extension LineLayer: HSProgressAnimation {
         
         firstShapeLayer.lineWidth = 5.0
         
+        
+        
+        
+        
+        firstShapeLayer.lineDashPattern = [5]
+        
+        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
+        lineDashPhaseAnimation.byValue = 10.0
+        lineDashPhaseAnimation.duration = 0.75
+        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
+        
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: "lineDashPhaseAnimation")
+        
+
+        
+        
         let lineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 1.3)
         let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 0.8)
         let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 2)
@@ -71,6 +88,6 @@ extension LineLayer: HSProgressAnimation {
         secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
-        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
+//        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
     }
 }
