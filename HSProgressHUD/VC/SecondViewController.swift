@@ -147,11 +147,11 @@ final class SecondViewController: UIViewController {
     @IBAction private func antColonyButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
-            options.radius = 100
-            options.secondLayerStrokeColor = CustomColors.niceBlue
-            options.strokeWidth = 17
-            options.thirdLayerStrokeColor = .gray
-            options.firstLayerStrokeColor = CustomColors.niceBlue
+            options.radius = 120
+            options.secondLayerStrokeColor = CustomColors.white
+            options.strokeWidth = 12
+            options.thirdLayerStrokeColor = .darkGray
+            options.firstLayerStrokeColor = CustomColors.windowsBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.antColony
         }
