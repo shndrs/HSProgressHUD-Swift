@@ -28,6 +28,7 @@
 		F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */; };
 		F44A2E6C22BF46B200F53B5C /* AntColony.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E6B22BF46B200F53B5C /* AntColony.swift */; };
 		F44A2E6E22BF7D0B00F53B5C /* HNK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E6D22BF7D0B00F53B5C /* HNK.swift */; };
+		F44A2E6F22BF997200F53B5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44A2E6F22BF997200F53B5C /* SecondViewController.swift in Sources */,
 				F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
