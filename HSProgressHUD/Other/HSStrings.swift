@@ -15,6 +15,7 @@ public enum HSStrings:String {
     case transformScaleX = "transform.scale.x"
     case transformRotationX = "transform.rotation.x"
     case transformRotationY = "transform.rotation.y"
+    case lineDashPhase
     case opacity
     case lineWidth
     case hsKey0

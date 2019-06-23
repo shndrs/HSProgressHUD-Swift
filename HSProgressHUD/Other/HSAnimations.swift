@@ -97,7 +97,7 @@ public class HSAnimations {
     @discardableResult
     public static func lineDashPhase(byValue:Any , duration: CFTimeInterval, option:CAMediaTimingFunctionName = .linear, autoreverse: Bool = false) -> CABasicAnimation {
         
-        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
+        let lineDashPhaseAnimation = CABasicAnimation(keyPath: HSStrings.lineDashPhase.rawValue)
         lineDashPhaseAnimation.byValue = byValue
         lineDashPhaseAnimation.duration = duration
         lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: option)
