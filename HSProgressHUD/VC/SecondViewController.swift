@@ -141,6 +141,28 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - AntColony Animation
+    
+    @IBAction private func antColonyButtonPressed(_ sender: UIButton) {
+        
+        let progress = HSProgressOptions { (options) in
+            options.radius = 100
+            options.secondLayerStrokeColor = .brown
+            options.strokeWidth = 17
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = .darkGray
+            options.title = "shndrs presents"
+            options.animationOption = HSAnimationOptions.antColony
+        }
+        
+        let hud = HSProgressHUD.set(progress: progress)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
 
 // MARK: - Life Cycle
