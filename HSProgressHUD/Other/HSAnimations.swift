@@ -105,6 +105,17 @@ public class HSAnimations {
         lineDashPhaseAnimation.repeatCount = .infinity
         return lineDashPhaseAnimation
     }
+    
+    @discardableResult
+    public static func strokeEndAnimation(toValue:Any = 1.0, duration:CFTimeInterval = 0.75, option:CAMediaTimingFunctionName = .easeInEaseOut) -> CABasicAnimation {
+        
+        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeEndAnimation.toValue = 1.0
+        strokeEndAnimation.duration = 0.75
+        strokeEndAnimation.timingFunction = CAMediaTimingFunction(name: option)
+        setCommonAnimationProperties(animation: strokeEndAnimation)
+        return strokeEndAnimation
+    }
 }
 
 // MARK: - Set common animation properties
