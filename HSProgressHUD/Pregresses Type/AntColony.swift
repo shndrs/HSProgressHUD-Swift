@@ -67,11 +67,7 @@ extension AntColony: HSProgressAnimation {
 //        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
 //        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
         
-        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 10.0, duration: 0.75, option: .linear)
-        
-        firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
-        
-        let lineWidthAnimation = HSAnimations.lineWidth(toValue: 15.0, duration: 1.3)
+        let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 10.0, duration: 0.75, option: .linear, autoreverse: false)
         let secondLineWidthAnimation = HSAnimations.lineWidth(toValue: 18.0, duration: 0.8)
         let thirdLineWidthAnimation = HSAnimations.lineWidth(toValue: 20.0, duration: 2)
         let opacityAnimation = HSAnimations.opacity()
@@ -80,6 +76,7 @@ extension AntColony: HSProgressAnimation {
         secondShapeLayer.add(secondLineWidthAnimation, forKey: HSStrings.hsKey1.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
-        //        firstShapeLayer.add(lineWidthAnimation, forKey: HSStrings.hsKey4.rawValue)
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
+        
     }
 }

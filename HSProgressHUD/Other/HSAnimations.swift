@@ -95,12 +95,14 @@ public class HSAnimations {
     }
     
     @discardableResult
-    public static func lineDashPhase(byValue:Any , duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
+    public static func lineDashPhase(byValue:Any , duration: CFTimeInterval, option:CAMediaTimingFunctionName = .linear, autoreverse: Bool = true) -> CABasicAnimation {
+        
         let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
         lineDashPhaseAnimation.byValue = byValue
         lineDashPhaseAnimation.duration = duration
         lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: option)
-        setCommonAnimationProperties(animation: lineDashPhaseAnimation)
+        lineDashPhaseAnimation.autoreverses = autoreverse
+        lineDashPhaseAnimation.repeatCount = .infinity
         return lineDashPhaseAnimation
     }
 }
