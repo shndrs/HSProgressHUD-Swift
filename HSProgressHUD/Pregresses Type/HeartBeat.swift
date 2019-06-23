@@ -58,7 +58,7 @@ extension HeartBeat: HSProgressAnimation {
     
     public func setAnimation() {
         
-        let transformAnimation = HSAnimations.transform(toValue: 1.09, duration: 0.8, option: .easeOut)
+        let transformAnimation = HSAnimations.transform(toValue: 1.07, duration: 0.8, option: .easeOut)
         let transformAnimationInnerPulsate = HSAnimations.transform(toValue: 0.95, duration: 1.6, option: .easeOut)
         let opacityAnimation = HSAnimations.opacity()
         let transformXScaleAnimation = HSAnimations.transformX()

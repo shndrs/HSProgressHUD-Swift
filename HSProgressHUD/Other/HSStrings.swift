@@ -9,12 +9,13 @@
 import Foundation
 
 public enum HSStrings:String {
+    
     case pleaseWait = "Please Wait...";
     case fontName = "Papyrus";
-    case transformScale = "transform.scale"
-    case transformScaleX = "transform.scale.x"
-    case transformRotationX = "transform.rotation.x"
-    case transformRotationY = "transform.rotation.y"
+    case transformScale = "transform.scale";
+    case transformScaleX = "transform.scale.x";
+    case transformRotationX = "transform.rotation.x";
+    case transformRotationY = "transform.rotation.y";
     case lineDashPhase
     case strokeEnd
     case opacity
@@ -29,5 +30,4 @@ public enum HSStrings:String {
     case hsKey7
     case hsKey8
     case hsKey9
-    
 }

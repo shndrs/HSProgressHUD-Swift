@@ -21,7 +21,7 @@ open class HSBaseView: UIView {
         let temp = CAShapeLayer()
         return temp
     }()
-    /// our second shape layer
+    /// our second shape layer which is transparent
     public private(set) lazy var secondShapeLayer: CAShapeLayer = {
         let temp = CAShapeLayer()
         return temp
@@ -43,13 +43,14 @@ open class HSBaseView: UIView {
         return lbl
     }()
     
-    /// the transparent view in the background
+    /// the transparent view in the background with alpha component 0.90
     public private(set) lazy var transView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.90)
         view.isUserInteractionEnabled = false
         return view
     }()
+    
     /// HSBaseView initializer that take a HSProgressOptions as it input
     public init(progress: HSProgressOptions) {
         self.progress = progress

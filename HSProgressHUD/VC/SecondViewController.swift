@@ -10,16 +10,16 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
-    // MARK: - Heart Beat Animation
+    // MARK: - HeartBeat HUD
     
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = .brown
-            options.strokeWidth = 17
-            options.thirdLayerStrokeColor = .gray
-            options.firstLayerStrokeColor = .darkGray
+            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.strokeWidth = 13
+            options.thirdLayerStrokeColor = .brown
+            options.firstLayerStrokeColor = .gray
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.heartBeat
         }
@@ -32,13 +32,13 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - LineLayer Animation
+    // MARK: - LineLayer HUD
 
     @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = .brown
+            options.secondLayerStrokeColor = CustomColors.niceBlue
             options.strokeWidth = 17
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .darkGray
@@ -54,16 +54,16 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - LordOfTheRings Animation
+    // MARK: - LordOfTheRings HUD
     
     @IBAction private func lordOfTheRingsButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = .brown
-            options.strokeWidth = 17
+            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.strokeWidth = 12
             options.thirdLayerStrokeColor = .gray
-            options.firstLayerStrokeColor = .darkGray
+            options.firstLayerStrokeColor = CustomColors.niceBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.lordOfTheRings
         }
@@ -76,7 +76,7 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - XRotation Animation
+    // MARK: - XRotation HUD
     
     @IBAction private func xRotationButtonPressed(_ sender: UIButton) {
         
@@ -98,7 +98,7 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - YRotation Animation
+    // MARK: - YRotation HUD
 
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
         
@@ -120,7 +120,7 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - XYRotation Animation
+    // MARK: - XYRotation HUD
     
     @IBAction private func xyRotationButtonPressed(_ sender: UIButton) {
         
@@ -142,7 +142,7 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: - AntColony Animation
+    // MARK: - AntColony HUD
     
     @IBAction private func antColonyButtonPressed(_ sender: UIButton) {
         
@@ -163,6 +163,8 @@ final class SecondViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    //MARK: - HNK HUD
     
     @IBAction private func hnkButtonPressed(_ sender: UIButton) {
         
