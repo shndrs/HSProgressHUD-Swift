@@ -75,7 +75,7 @@ open class HSBaseView: UIView {
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
                                              radius: progress.radius,
-                                             startAngle: -(.pi) / 2, endAngle:2 * .pi,
+                                             startAngle: -(.pi) , endAngle:2 * .pi,
                                              clockwise: true)
         
         shapeLayer.position = transView.center
