@@ -164,16 +164,16 @@ final class SecondViewController: UIViewController {
         }
     }
     
-    @IBAction private func lineDashRotationButtonPressed(_ sender: UIButton) {
+    @IBAction private func hnkButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
-            options.radius = 130
+            options.radius = 115
             options.secondLayerStrokeColor = CustomColors.niceBlue
-            options.strokeWidth = 5
+            options.strokeWidth = 3
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = CustomColors.niceBlue
             options.title = "shndrs presents"
-            options.animationOption = HSAnimationOptions.lineDashRotation
+            options.animationOption = HSAnimationOptions.hnk
         }
         
         let hud = HSProgressHUD.set(progress: progress)

@@ -47,9 +47,9 @@ public struct HSProgressHUD {
             
             return AntColony(progress:progress)
             
-        case .lineDashRotation:
+        case .hnk:
             
-            return LineDashRotation(progress:progress)
+            return HNK(progress:progress)
             
         }
     }

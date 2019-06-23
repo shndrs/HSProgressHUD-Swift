@@ -1,5 +1,5 @@
 //
-//  LineDashRotation.swift
+//  HNK.swift
 //  HSProgressHUD
 //
 //  Created by NP2 on 6/23/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final public class LineDashRotation: HSBaseView {}
+final public class HNK: HSBaseView {}
 
 // MARK: HSProgressProtocol Impelementation
 
-extension LineDashRotation: HSProgress {
+extension HNK: HSProgress {
     
     public func show() {
         
@@ -43,7 +43,7 @@ extension LineDashRotation: HSProgress {
 
 // MARK: Set Animation And Layers
 
-extension LineDashRotation: HSProgressAnimation {
+extension HNK: HSProgressAnimation {
     
     public func setLayers() {
         transView.alpha = 0
@@ -71,11 +71,8 @@ extension LineDashRotation: HSProgressAnimation {
         firstShapeLayer.strokeEnd = 0.0
         
         let rotationXAnimation = HSAnimations.rotationX(duration: 6)
-        let rotationYAnimation = HSAnimations.rotationY(duration: 3)
         let transformScaleAnimation = HSAnimations.transform(toValue: 0.96, duration: 2.0, option: .easeInEaseOut)
-        let transformScaleAnimation2 = HSAnimations.transform(toValue: 1.0, duration: 1.0, option: .easeInEaseOut)
         let transformScaleAnimation3 = HSAnimations.transform(fromValue: 1.04, toValue: 1.09, duration: 3, option: .easeInEaseOut)
-        
         let opacityAnimation = HSAnimations.opacity()
         let lineDashPhaseAnimation = HSAnimations.lineDashPhase(byValue: 18.0, duration: 0.75)
         let strokeEndAnimation = HSAnimations.strokeEndAnimation(toValue: 1, duration: 0.4, option: .easeIn)
