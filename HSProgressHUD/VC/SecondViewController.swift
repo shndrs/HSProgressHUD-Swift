@@ -148,10 +148,10 @@ final class SecondViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = .brown
+            options.secondLayerStrokeColor = CustomColors.niceBlue
             options.strokeWidth = 17
             options.thirdLayerStrokeColor = .gray
-            options.firstLayerStrokeColor = .darkGray
+            options.firstLayerStrokeColor = CustomColors.niceBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.antColony
         }
