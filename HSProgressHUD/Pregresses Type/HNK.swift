@@ -70,7 +70,7 @@ extension HNK: HSProgressAnimation {
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
         
-        let rotationXAnimation = HSAnimations.rotationY(duration: 6)
+        let rotationYAnimation = HSAnimations.rotationY(duration: 6)
         let transformScaleAnimation = HSAnimations.transform(toValue: 0.96, duration: 2.0, option: .easeInEaseOut)
         let transformScaleAnimation3 = HSAnimations.transform(fromValue: 1.04, toValue: 1.09, duration: 3, option: .easeInEaseOut)
         let opacityAnimation = HSAnimations.opacity()
@@ -78,7 +78,7 @@ extension HNK: HSProgressAnimation {
         let strokeEndAnimation = HSAnimations.strokeEndAnimation(toValue: 1, duration: 0.4, option: .easeIn)
         
         firstShapeLayer.add(transformScaleAnimation, forKey: HSStrings.hsKey0.rawValue)
-        secondShapeLayer.add(rotationXAnimation, forKey: HSStrings.hsKey1.rawValue)
+        secondShapeLayer.add(rotationYAnimation, forKey: HSStrings.hsKey1.rawValue)
         thirdShapeLayer.add(transformScaleAnimation3, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: HSStrings.hsKey4.rawValue)
