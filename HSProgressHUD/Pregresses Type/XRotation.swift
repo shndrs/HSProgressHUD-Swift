@@ -68,5 +68,5 @@ extension XRotation: HSProgressAnimation {
         thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: HSStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: HSStrings.hsKey3.rawValue)
         titleLabel.layer.add(transformScaleAnimation, forKey: HSStrings.hsKey4.rawValue)
-}
+    }
 }

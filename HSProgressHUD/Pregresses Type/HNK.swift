@@ -70,7 +70,7 @@ extension HNK: HSProgressAnimation {
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
         
-        let rotationXAnimation = HSAnimations.rotationX(duration: 6)
+        let rotationXAnimation = HSAnimations.rotationY(duration: 6)
         let transformScaleAnimation = HSAnimations.transform(toValue: 0.96, duration: 2.0, option: .easeInEaseOut)
         let transformScaleAnimation3 = HSAnimations.transform(fromValue: 1.04, toValue: 1.09, duration: 3, option: .easeInEaseOut)
         let opacityAnimation = HSAnimations.opacity()

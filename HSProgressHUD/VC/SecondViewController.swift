@@ -33,7 +33,7 @@ final class SecondViewController: UIViewController {
     }
     
     // MARK: - LineLayer HUD
-
+    
     @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
@@ -148,10 +148,10 @@ final class SecondViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 120
-            options.secondLayerStrokeColor = CustomColors.white
+            options.secondLayerStrokeColor = CustomColors.darkGray
             options.strokeWidth = 12
             options.thirdLayerStrokeColor = .darkGray
-            options.firstLayerStrokeColor = CustomColors.windowsBlue
+            options.firstLayerStrokeColor = CustomColors.white
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.antColony
         }
