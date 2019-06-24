@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second View Controller-->
+        <!--View Controller-->
         <scene sceneID="Zxu-6g-BXl">
             <objects>
-                <viewController id="NWD-Ta-Dzn" customClass="SecondViewController" customModule="HSProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NWD-Ta-Dzn" customClass="ViewController" customModule="HSProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6m6-T6-XlY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

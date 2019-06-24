@@ -15,7 +15,7 @@
 		F433BD2E2289766200281381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2C2289766200281381 /* Main.storyboard */; };
 		F433BD302289766300281381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F433BD2F2289766300281381 /* Assets.xcassets */; };
 		F433BD332289766300281381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F433BD312289766300281381 /* LaunchScreen.storyboard */; };
-		F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
+		F43DEA89228BD34B0055B590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* ViewController.swift */; };
 		F43DEA8C228BF9990055B590 /* HSProgress Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA8B228BF9990055B590 /* HSProgress Model.swift */; };
 		F43DEA92228C07AD0055B590 /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA91228C07AD0055B590 /* HeartBeat.swift */; };
 		F43DEA94228C07B90055B590 /* XRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA93228C07B90055B590 /* XRotation.swift */; };
@@ -28,7 +28,7 @@
 		F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4488CBF228ADE5E00D61AF0 /* HSStrings.swift */; };
 		F44A2E6C22BF46B200F53B5C /* AntColony.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E6B22BF46B200F53B5C /* AntColony.swift */; };
 		F44A2E6E22BF7D0B00F53B5C /* HNK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E6D22BF7D0B00F53B5C /* HNK.swift */; };
-		F44A2E6F22BF997200F53B5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* SecondViewController.swift */; };
+		F44A2E6F22BF997200F53B5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DEA88228BD34B0055B590 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		F433BD2F2289766300281381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F433BD322289766300281381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F433BD342289766300281381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F43DEA88228BD34B0055B590 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F43DEA88228BD34B0055B590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F43DEA8B228BF9990055B590 /* HSProgress Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HSProgress Model.swift"; sourceTree = "<group>"; };
 		F43DEA91228C07AD0055B590 /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
 		F43DEA93228C07B90055B590 /* XRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRotation.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		F4BE6A5F228C2DA40044F3A2 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				F43DEA88228BD34B0055B590 /* SecondViewController.swift */,
+				F43DEA88228BD34B0055B590 /* ViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44A2E6F22BF997200F53B5C /* SecondViewController.swift in Sources */,
+				F44A2E6F22BF997200F53B5C /* ViewController.swift in Sources */,
 				F421DFC422911D1D00E1DBAF /* HSProgressHUDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +323,7 @@
 				F43DEA94228C07B90055B590 /* XRotation.swift in Sources */,
 				F421DFDA2291732400E1DBAF /* HSAnimations.swift in Sources */,
 				F433BD292289766200281381 /* AppDelegate.swift in Sources */,
-				F43DEA89228BD34B0055B590 /* SecondViewController.swift in Sources */,
+				F43DEA89228BD34B0055B590 /* ViewController.swift in Sources */,
 				F4488CC0228ADE5E00D61AF0 /* HSStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

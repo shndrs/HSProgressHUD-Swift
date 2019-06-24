@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SecondViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // MARK: - HeartBeat HUD
     
@@ -189,7 +189,7 @@ final class SecondViewController: UIViewController {
 
 // MARK: - Life Cycle
 
-extension SecondViewController {
+extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = "HSProgressHUD"
