@@ -26,7 +26,7 @@ extension LordOfTheRings: HSProgress {
         })
     }
     
-    public func dismiss(completion: (() -> Void)?) {
+    public func dismiss(completion: (() -> Void)? = nil) {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             
