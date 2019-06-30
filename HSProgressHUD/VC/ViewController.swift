@@ -2,15 +2,13 @@
 //  ViewController.swift
 //  HSProgressHUD
 //
-//  Created by NP2 on 5/15/19.
+//  Created by NP2 on 6/26/19.
 //  Copyright © 2019 shndrs. All rights reserved.
 //
 
 import UIKit
 
 final class ViewController: UIViewController {
-    
-    // MARK: - HeartBeat HUD
     
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
@@ -99,7 +97,7 @@ final class ViewController: UIViewController {
     }
     
     // MARK: - YRotation HUD
-
+    
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
@@ -196,3 +194,4 @@ extension ViewController {
         navigationController?.navigationBar.barTintColor = .white
     }
 }
+

@@ -32,7 +32,7 @@ extension HeartBeat: HSProgress {
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.transView.alpha = 0
             self.transView.layoutIfNeeded()
-        }) { (success) in
+        }) { _ in
             
             self.transView.removeFromSuperview()
             UIApplication.shared.keyWindow?.isUserInteractionEnabled = true

@@ -32,7 +32,7 @@ extension HNK: HSProgress {
             
             self.transView.alpha = 0
             self.transView.layoutIfNeeded()
-        }) { (success) in
+        }) { _ in
             
             self.transView.removeFromSuperview()
             UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
