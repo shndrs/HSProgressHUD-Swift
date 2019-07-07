@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct CustomColors {
+public struct HSCustomColors {
     
     public static let windowsBlue = UIColor(red: 52/255, green: 152/255, blue: 198, alpha: 1.0)
     public static let niceBlue = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
@@ -29,7 +29,7 @@ public struct CustomColors {
     public static let greenButton = UIColor(red: 0.0/255.0, green: 185.0/255.0, blue: 86.0/255.0, alpha: 1.0)
     public static let indigo = UIColor(red: 75/255.0, green: 0.0/255.0, blue: 130/255.0, alpha: 0.9)
     public static let royalBlue = UIColor(red: 65/255.0, green: 105.0/255.0, blue: 225/255.0, alpha: 0.9)
-    public static let dingMainGreen = UIColor(red: 127.0/255.0, green: 194.0/255.0, blue: 65.0/255.0, alpha: 1.0)
+    public static let greeny = UIColor(red: 127.0/255.0, green: 194.0/255.0, blue: 65.0/255.0, alpha: 1.0)
     public static let ultraDarkGreen = UIColor(red: 127.0/255.0, green: 212.0/255.0, blue: 65.0/255.0, alpha: 1.0)
     public static let nicePink = UIColor(red: 255.0/255.0, green: 90.0/255.0, blue: 145.0/255.0, alpha: 1.0)
     public static let niceOrange = UIColor(red: 255.0/255.0, green: 187.0/255.0, blue: 47.0/255.0, alpha: 1.0)

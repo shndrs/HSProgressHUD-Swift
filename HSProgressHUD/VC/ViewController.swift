@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.secondLayerStrokeColor = HSCustomColors.niceBlue
             options.strokeWidth = 13
             options.thirdLayerStrokeColor = .brown
             options.firstLayerStrokeColor = .gray
@@ -36,7 +36,7 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.secondLayerStrokeColor = HSCustomColors.niceBlue
             options.strokeWidth = 13
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = .black
@@ -58,10 +58,10 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = CustomColors.greenButton
+            options.secondLayerStrokeColor = HSCustomColors.greenButton
             options.strokeWidth = 12
             options.thirdLayerStrokeColor = .darkGray
-            options.firstLayerStrokeColor = CustomColors.niceBlue
+            options.firstLayerStrokeColor = HSCustomColors.niceBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.lordOfTheRings
         }
@@ -124,10 +124,10 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 100
-            options.secondLayerStrokeColor = CustomColors.greenButton
+            options.secondLayerStrokeColor = HSCustomColors.greenButton
             options.strokeWidth = 12
             options.thirdLayerStrokeColor = .darkGray
-            options.firstLayerStrokeColor = CustomColors.niceBlue
+            options.firstLayerStrokeColor = HSCustomColors.niceBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.xyRotation
         }
@@ -146,10 +146,10 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 120
-            options.secondLayerStrokeColor = CustomColors.darkGray
+            options.secondLayerStrokeColor = HSCustomColors.darkGray
             options.strokeWidth = 12
             options.thirdLayerStrokeColor = .darkGray
-            options.firstLayerStrokeColor = CustomColors.white
+            options.firstLayerStrokeColor = HSCustomColors.white
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.antColony
         }
@@ -168,10 +168,10 @@ final class ViewController: UIViewController {
         
         let progress = HSProgressOptions { (options) in
             options.radius = 115
-            options.secondLayerStrokeColor = CustomColors.niceBlue
+            options.secondLayerStrokeColor = HSCustomColors.niceBlue
             options.strokeWidth = 3
             options.thirdLayerStrokeColor = .gray
-            options.firstLayerStrokeColor = CustomColors.niceBlue
+            options.firstLayerStrokeColor = HSCustomColors.niceBlue
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.hnk
         }
