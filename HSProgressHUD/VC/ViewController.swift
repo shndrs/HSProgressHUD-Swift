@@ -57,11 +57,11 @@ final class ViewController: UIViewController {
     @IBAction private func lordOfTheRingsButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
-            options.radius = 100
-            options.secondLayerStrokeColor = HSCustomColors.greenButton
+            options.radius = 120
+            options.secondLayerStrokeColor = HSCustomColors.white
             options.strokeWidth = 12
-            options.thirdLayerStrokeColor = .darkGray
-            options.firstLayerStrokeColor = HSCustomColors.niceBlue
+            options.thirdLayerStrokeColor = HSCustomColors.darkGray
+            options.firstLayerStrokeColor = HSCustomColors.veryLightGray
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.lordOfTheRings
         }

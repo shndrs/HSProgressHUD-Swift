@@ -8,7 +8,17 @@
 
 import UIKit
 
-final public class HNK: HSBaseView {}
+final public class HNK: HSBaseView {
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if UIDevice.current.orientation.isPortrait {
+            transView.frame = UIScreen.main.bounds
+        } else {
+            transView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.width)
+        }
+    }
+}
 
 // MARK: HSProgressProtocol Impelementation
 
