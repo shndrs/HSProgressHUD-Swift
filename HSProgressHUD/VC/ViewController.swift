@@ -169,7 +169,7 @@ final class ViewController: UIViewController {
         let progress = HSProgressOptions { (options) in
             options.radius = 115
             options.secondLayerStrokeColor = HSCustomColors.niceBlue
-            options.strokeWidth = 3
+            options.strokeWidth = 2
             options.thirdLayerStrokeColor = .gray
             options.firstLayerStrokeColor = HSCustomColors.niceBlue
             options.title = "shndrs presents"

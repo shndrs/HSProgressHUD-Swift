@@ -20,7 +20,8 @@ class HSProgressHUDUITests: XCTestCase {
     func testExample() {
         
         let app = XCUIApplication()
-        app.buttons["Show Custom Indicator"].tap()
-        app.otherElements.containing(.image, identifier:"bg5").element.tap()
+        let hnkButtonTapped = app.buttons["HNK"]
+        hnkButtonTapped.tap()
+        app.statusBars.children(matching: .other).element.children(matching: .other).element(boundBy: 0).tap()
     }
 }
