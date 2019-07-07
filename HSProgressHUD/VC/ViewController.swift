@@ -13,11 +13,11 @@ final class ViewController: UIViewController {
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
         let progress = HSProgressOptions { (options) in
-            options.radius = 100
-            options.secondLayerStrokeColor = HSCustomColors.niceBlue
-            options.strokeWidth = 13
-            options.thirdLayerStrokeColor = .brown
-            options.firstLayerStrokeColor = .gray
+            options.radius = 120
+            options.secondLayerStrokeColor = HSCustomColors.darkGray
+            options.strokeWidth = 12
+            options.thirdLayerStrokeColor = .gray
+            options.firstLayerStrokeColor = HSCustomColors.greenButton
             options.title = "shndrs presents"
             options.animationOption = HSAnimationOptions.heartBeat
         }

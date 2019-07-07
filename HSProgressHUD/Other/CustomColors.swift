@@ -26,7 +26,7 @@ public struct HSCustomColors {
     public static let redPinkPunk = UIColor(red: 255.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0)
     public static let veryLightGray = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1.0)
     public static let veryLightGrayTrans = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.7)
-    public static let greenButton = UIColor(red: 0.0/255.0, green: 185.0/255.0, blue: 86.0/255.0, alpha: 1.0)
+    public static let greenButton = UIColor(red: 0.0/255.0, green: 205.0/255.0, blue: 60.0/255.0, alpha: 1.0)
     public static let indigo = UIColor(red: 75/255.0, green: 0.0/255.0, blue: 130/255.0, alpha: 0.9)
     public static let royalBlue = UIColor(red: 65/255.0, green: 105.0/255.0, blue: 225/255.0, alpha: 0.9)
     public static let greeny = UIColor(red: 127.0/255.0, green: 194.0/255.0, blue: 65.0/255.0, alpha: 1.0)
